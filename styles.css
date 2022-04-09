@@ -1,0 +1,28 @@
+body{
+    background-image: url("Etusivukuva.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+} 
+div.container {
+    
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    opacity: 0.6;
+    margin-top: 20px;
+    color: #000000;
+    width: 70%;
+    text-align: center;
+    align-content: space-around;
+
+    float: center;
+  }
+
+  .navbar {
+      background-color: orange;
+  }
+
+
+  
+
