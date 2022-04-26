@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrapin CSS-osoite -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/mastyles.css">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Maantietovisa</title>
+  </head>
+  <body>
+    <!-- Navbar-malli kopioitu ... -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Etusivu</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link active" href="about.html">Tietoja</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="">Historia</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Matematiikka</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../maantieto.html">Maantieto</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Englanti</a>
+          </li>
+          </ul>
+      </div>
+      </div>
+  </nav>
+  <!--Headerissä toivotetaan tervetulleeksi sivulle ja infoa visasta-->
+  <header>
+        <h1>Tervetuloa maantietovisaan!</h1>
+        <p>Tässä visassa pääset kokeilemaan tietojasi maantiedosta. Onnea tehtäviin!</p>
+  </header>
+    <!--Visan sisältö Bootstrap-containerissa-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <p>Kysymys 1:<br> Mikä seuraavista on maastossa esiintyvä painanne?</p>
+                <div>
+                    <div id="yksi">
+                        <input type="radio" name="kys1" id="suppa"> 
+                        <label for="suppa">a) Suppa</label> <br>
+                        <input type="radio" name="kys1" id="harju">
+                        <label for="harju"> b) Harju</label> <br>
+                        <input type="radio" name="kys1" id="vaara"> 
+                        <label for="vaara"> c) Vaara</label> <br>
+                        <input type="radio" name="kys1" id="tunturi"> 
+                        <label for="tunturi"> d) Tunturi</label><br>
+                        <button type="button" onclick="kys1()">Tarkista</button>
+                    </div>
+                    <p id="palaute_yksi"></p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <p>Kysymys 2: <br>Mikä näistä maista kuuluu Afrikkaan?</p>
+                <div>
+                    <div id="kaksi">
+                        <input type="radio" name="kys2" id="malta">
+                        <label for="malta"> a) Malta</label> <br>
+                        <input type="radio" name="kys2" id="saudi">
+                        <label for="saudi"> b) Saudi-Arabia</label> <br>
+                        <input type="radio" name="kys2" id="tasmania">
+                        <label for="tasmania"> c) Tasmania</label><br>
+                        <input type="radio" name="kys2" id="sambia">
+                        <label for="sambia"> d) Sambia</label> <br>
+                        <button type="button" onclick="kys2()">Tarkista</button>
+                    </div>
+                    <p id="palaute_kaksi"></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <p>Kysymys 3: <br> Suomen yleisin puulaji on?</p>
+                <div id="kolme">
+                    <input type="radio" name="kys3" id="koivu">
+                    <label for="koivu"> 1) Koivu</label><br>
+                    <input type="radio" name="kys3" id="mänty">
+                    <label for="mänty"> 2) Mänty</label> <br>
+                    <input type="radio" name="kys3" id="vaahtera">
+                    <label for="vaahtera"> 3) Vaahtera</label> <br>
+                    <input type="radio" name="kys3" id="kataja">
+                    <label for="kataja"> 4) Kataja</label> <br>
+                    <button type="button" onclick="kys3()">Tarkista</button>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <p id>Kysymys 4: <br> Mikä seuraavista EI ole Suomen rajanaapuri?</p>
+                <div id="neljä">
+                    <input type="radio" name="kys4" id="norja">
+                    <label for="norja"> a) Norja</label> <br>
+                    <input type="radio" name="kys4" id="venäjä">
+                    <label for="venäjä"> b) Venäjä</label> <br>
+                    <input type="radio" name="kys4" id="latvia">
+                    <label for="latvia"> c) Latvia</label> <br>
+                    <input type="radio" name="kys4" id="ruotsi">
+                    <label for="ruotsi"> d) Ruotsi</label> <br>
+                    <button type="button" onclick="kys4()">Tarkista</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <p>Kysymys 5: <br> Miksi kutsutaan jääkauden aikana kiven kallioon pyörittämää lieriönmuotoista kuoppaa?</p>
+                <div id="viisi">
+                    <input type="radio" name="kys5" id="noita">
+                    <label for="noita"> a) Noidanpata</label> <br>
+                    <input type="radio" name="kys5" id="mörkö">
+                    <label for="mörkö"> b) Mörönmonttu</label> <br>
+                    <input type="radio" name="kys5" id="hiisi">
+                    <label for="hiisi"> c) Hiidenkirnu</label> <br>
+                    <input type="radio" name="kys5" id="peikko">
+                    <label for="peikko"> d) Peikonreikä</label> <br>
+                    <button type="button" onclick="kys5()">Tarkista</button>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <p>Kysymys 6: <br> Miten tämä testi toimii?</p>
+                <div id="kuusi">
+                    <button type="button" onclick="bra()">Hyvin</button> <br>
+                    <button type="button" onclick="dålig()">Huonosti</button> <br>
+                    <button type="button" onclick="surkea()">Hyvin huonosti</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Vastasit oikein:</h2>
+                <p id="oikein"></p>
+                <button type="button" onclick="palaute()">Palaute</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            
+            <p class="poes">Tämän visan suunnitteli ja toteutti</p>
+            <p>Tuomas Polvinen</p>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="script/mascript.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
