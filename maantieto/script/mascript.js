@@ -1,5 +1,6 @@
-// Kuvat palautteeksi oikeasta vastauksesta. Ruusut Pixabaysta.
+// Tuomas Polvinen
 
+// Kuvat palautteeksi oikeasta vastauksesta. Ruusut Pixabaysta.
 const ruusu_yksi = '<img alt="ruusu1" src="img/ruusu1.png">';
 const ruusu_kaksi = '<img alt="ruusu2" src="img/ruusu2.png">';
 const ruusu_kolme = '<img alt="ruusu3" src="img/ruusu3.png">';
@@ -64,7 +65,7 @@ function kys5() {
     }
     
 } 
-
+/*
 function bra() {
     document.getElementById("kuusi").innerHTML="Hienoa, vastasit täysin oikein!";
     
@@ -77,6 +78,7 @@ function dålig() {
 function surkea() {
     document.getElementById("kuusi").innerHTML="Tämän enempää et voi olla väärässä!"
 }
+*/
 
 function palaute() {
     
