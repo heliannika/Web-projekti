@@ -1,11 +1,11 @@
-body{
+body {
     background-image: url("Etusivukuva.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 } 
+
 div.container {
-    
     margin: auto;
     padding: 20px;
     background-color: #ffffff;
@@ -15,13 +15,12 @@ div.container {
     width: 70%;
     text-align: center;
     align-content: space-around;
-
     float: center;
-  }
+}
 
   .navbar {
       background-color: orange;
-  }
+}
 
 
   
