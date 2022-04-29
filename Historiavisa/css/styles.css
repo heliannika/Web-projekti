@@ -1,0 +1,133 @@
+/* Elina Rantaniemi
+Lähteenä käytetty coding with nick:
+https://codingwithnick.in/
+*/
+body {
+   background-image: url("../images/Etusivukuva.webp");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+} 
+
+div.container {
+   margin: auto;
+   padding: 20px;
+   background-color: #ffffff;
+   opacity: 0.9;
+   margin-top: 20px;
+   color: #000000;
+   width: 40%;
+   text-align: center;
+   align-content: space-around;
+   float: center;
+}
+
+.navbar {
+   background-color: orange;
+}
+
+#question {
+   color: rgb(233, 94, 94);
+   font-size: 1.5em;
+}
+
+a {
+   color: rgb(233, 94, 94);
+}
+
+a:hover{
+   color: orange;
+}
+
+/* Quiz image */
+
+.responsive {
+   margin-top: 30px;
+   width: 60%;
+   height: auto;
+}
+
+.quiz-img {
+   background-color: rgb(255, 255, 255);
+   color:rgb(165, 165, 165);
+   text-align: center;
+   float: center;
+}
+
+/* Quiz's styles */
+
+.quiz-container {
+   background-color: rgb(255, 255, 255);
+   width: 100%;
+   text-align: left;
+}
+
+.quiz-header {
+   padding: 30px;
+}
+
+#sidebar {
+   background-color: rgb(255, 237, 214);
+}
+
+h2 {
+   padding: 20px;
+   text-align: center;
+   margin: 0;
+   color: rgb(233, 94, 94);
+}
+
+/* Response options */
+
+ul {
+   list-style-type: none;
+   padding: 0;
+}
+
+ul li {
+   font-size: 1.2rem;
+   margin: 1rem 0;
+} 
+
+ul li label {
+   cursor: pointer;
+}
+
+/* Button and right/wrong prints */
+
+button {
+   background-color: #03cae4;
+   color: #fff;
+   border: none;
+   display: block;
+   width: 90%;
+   cursor: pointer;
+   font-size: 1.2rem;
+   padding: 10px;
+   margin: auto;
+   margin-bottom: 20px;
+}
+
+button:hover {
+   background-color: #04adc4;
+}
+
+#quiz-right {
+   color: green;
+}
+
+#quiz-wrong {
+   color: red;
+}
+
+/* Footer */
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: orange;
+   color: rgb(0, 0, 0);
+   text-align: center;
+}
