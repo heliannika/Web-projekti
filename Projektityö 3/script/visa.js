@@ -154,6 +154,6 @@ function scoreRender(){
               (scorePerCent >= 1) ? "../img/1.5.png" :
               "0.5.png";
     
-    scoreDiv.innerHTML = "<img src="+ img +">";
+    scoreDiv.innerHTML = "<img alt="Juu" src="+ img +">";
     scoreDiv.innerHTML += "Vastasit oikein "+ scorePerCent + " kysymykseen." + "<br>" + "Oikeat ratkaisut;"+ "<br>" + "<br>" + Tehtävä1 + "<br>" + "<br>" + Tehtävä2+ "<br>"+ "<br>" + Tehtävä3+ "<br>"+ "<br>" + Tehtävä4+ "<br>"+ "<br>" + Tehtävä5;
 }
