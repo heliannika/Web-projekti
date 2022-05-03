@@ -4,8 +4,6 @@ let thirdsec = document.getElementById("question_Section3");
 let fourthsec = document.getElementById("question_Section4");
 let fifthsec = document.getElementById("question_Section5");// Muuttujat jokaiselle kysymysosiolle, joita pystyy hyödyntämään sivuston skrollaustoiminnossa.
 
-
-
 // Ensimmäisen osion pisteiden muuttujan ja arvon määrittely nollaksi.
 
 let quiz_Score = 0;
