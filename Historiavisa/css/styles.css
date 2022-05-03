@@ -3,7 +3,7 @@ Lähteenä käytetty coding with nick:
 https://codingwithnick.in/
 */
 body {
-   background-image: url("./Historiavisa/images/Etusivukuva.webp");
+   background-image: url("../images/Etusivukuva.webp");
    background-repeat: no-repeat;
    background-size: cover;
    background-attachment: fixed;
