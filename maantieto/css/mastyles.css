@@ -1,3 +1,29 @@
+/* Yhteinen css-pohja */
+
+body {
+    background-image: url("../../Etusivukuva.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+div.container {
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    opacity: 0.9;
+    margin-top: 20px;
+    color: #000000;
+    width: 70%;
+    text-align: center;
+    align-content: space-around;
+    float: center;
+}
+
+.navbar {
+    background-color: orange;
+}
+
 /* Tuomas Polvinen */
 
 header {
@@ -6,9 +32,8 @@ header {
     margin-top: 20px;
     width: 70%;
     background-color: #ffffff;
-    opacity: 0.6;
+    opacity: 0.8;
     text-align: center;
-
 }
 
 footer {
@@ -16,7 +41,7 @@ footer {
     margin: auto;
     width: 70%;
     background-color: #ffffff;
-    opacity: 0.6;
+    opacity: 0.8;
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: right;
@@ -40,6 +65,8 @@ button {
     background-size: cover;
     min-height: 270px;
 }
+
+
 
 @media only screen and (max-width: 768px) {
   .poes {
