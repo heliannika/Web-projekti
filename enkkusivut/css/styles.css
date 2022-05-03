@@ -1,0 +1,127 @@
+body, h1 {
+    font-weight: 100;
+}
+
+#quiz_Intro {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: burlywood;
+    border: dotted orange;
+}
+
+.prefix {
+    text-align: center;
+    font-size: 2em;
+}
+
+#quiz_Counter, #quiz_Score {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    padding: 10px;
+}
+
+div {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+body {
+    background-image: url("../images/Etusivukuva.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 50px;
+}
+
+div.container {
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    opacity: 0.7;
+    margin-top: 10px;
+    color: #000000;
+    width: 70%;
+    text-align: center;
+    align-content: space-around;
+    float: center;
+}
+
+.navbar {
+    background-color: orange;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+section {
+    border-bottom: burlywood 3px dotted;
+    padding: 5px;
+    text-align: center;
+    background-color: #ffffff;
+    width: 70%;
+    align-content: space-around;
+    float: center;
+    margin: auto;
+    color: #000000;
+    position: relative;
+}
+
+#question_Section1 {
+    margin-bottom: 1.5em;
+}
+
+#question_Section2, #question_Section3, #question_Section4, #question_Section5 {
+    margin-bottom: 1.5em;
+    border-top: burlywood 3px dotted; 
+}
+
+select {
+    background-color: burlywood;
+    border-bottom: dotted orange;
+    border-left: dotted orange;
+    border-top: dotted burlywood;
+    border-right: dotted burlywood;
+}
+
+select:hover {
+    background-color: blanchedalmond;
+}
+
+button {
+    background-color: orange;
+    border-radius: 30px;
+    border: orange 3px solid;
+}
+
+button:hover {
+    background-color: blanchedalmond;
+}
+
+img {
+    width: 50%;
+    margin-bottom: 1em;
+}
+
+#resultsfortheQuiz {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    border-top: burlywood 3px dotted;
+}
+
+#submitTheQuiz {
+    background-color: blanchedalmond;
+    border-color: burlywood;
+}
+
+#submitTheQuiz:hover {
+    background-color: orange;
+    border-color: orange;
+}

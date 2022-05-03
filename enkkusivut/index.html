@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Englannin sanastovisa</title>
+    <!--Bootstrapin CSS-tiedosto -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+    <body>      
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Etusivu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="about.html">Tietoja</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="">Historia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Matematiikka</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="maantieto/maantieto.html">Maantieto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Englanti</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+            <div class="container">
+                <div class="row">
+                    <div  class="col-md-12 col-sm-12">
+                        <h1 class="special-font">Englannin sanastovisa</h1>
+                    </div>
+                <p>Tällä sivulla pääset oppimaan englannin kielen sanastoa visaisten tehtävien avulla. 
+                    Jokaisen osion tehtäviin voi vastata vain kerran, joten harkitse vastauksiasi tarkkaan. Oikeasta vastauksesta saat aina yhden pisteen.
+                    Pisteet lasketaan ensin osiokohtaisesti ja lopussa saat tietää lopullisen tuloksen osioiden yhteenlasketuista pisteistä. Hauskoja visailuhetkiä!
+                </p>  
+                </div>
+            </div>
+
+            <!-- Ensimmäinen osio. -->
+        
+                <section id = "question_Section1">
+
+                    <!-- Pisteet ja tehtävänumero. -->
+
+                        <div id="quiz_Intro">
+                            <div class="quiz_Counter">
+                                <p class="prefix">Osio:</p>
+                                <h1 id="quiz_Counter">1/5</h1>
+                            </div>
+                            <div class="quiz_Score">
+                                <p class="prefix">Pisteet osiosta:</p>
+                                <h1 id="quiz_Score">0</h1>
+                            </div>    
+                            </div>
+                            <form>
+
+                                <!-- Kysymys & tehtävän anto. -->
+
+                                <h2>Mitä sanat tarkoittavat englanniksi?</h2>
+                                <p>Valitse valikosta englannin kielellä samaa tarkoittava sana.</p>
+
+                                <!-- Määritellään sana, jolle halutaan käännössana. -->
+
+                                <label for="fork" class="questions" id ="fork" name = "fork">Haarukka</label>
+
+                                <!-- Vastausvaihtoehtojen määrittelyt dropdown -valikkoon. -->
+            
+                                <select name="fork" id="forkQ">
+                                    <option onclick="incorrect()" value = "0">spoon</option>
+                                    <option onclick="incorrect()" value = "0">knife</option>
+                                    <option onclick="correctA1()" value = "1">fork</option>
+                                </select> 
+
+                                <!-- Palautteiden tulostuselementit. -->
+
+                                <p id="result1.1"></p>
+                                <p id="error1.1"></p>
+                                
+                                <label for="plate" class="questions" text id ="plate">Lautanen</label>
+            
+                                <select name="plate" id="plateQ">
+                                    <option onclick="correctA2()">plate</option>
+                                    <option onclick="incorrect2()">cup</option>
+                                    <option onclick="incorrect2()">fork</option>
+                                </select> 
+                                <p id="result1.2"></p>
+                                <p id="error1.2"></p>
+
+                                <label for="kitchen" class="questions" text id ="kitchen">Keittiö</label>
+            
+                                <select name="kitchen" id="kitchenQ">
+                                    <option onclick="incorrect3()">fork</option>
+                                    <option onclick="correctA3()">kitchen</option>
+                                    <option onclick="incorrect3()">bowl</option>
+                                </select> 
+                                <p id="result1.3"></p>
+                                <p id="error1.3"></p>
+
+                                <label for="bowl" class="questions" text id ="bowl">Kulho</label>
+            
+                                <select name="bowl" id="bowlQ">
+                                    <option onclick="incorrect4()">kitchen</option>
+                                    <option onclick="incorrect4()">plate</option>
+                                    <option onclick="correctA4()">bowl</option>
+                                </select> 
+                                <p id="result1.4"></p>
+                                <p id="error1.4"></p>
+                                </form>
+
+                                <!-- Painike pisteiden tulostukseen. -->
+
+                    <button type="button" onclick="visa01()">Tarkista vastaukset!</button>
+
+                    <!-- Palautteen tulostus. -->
+
+                    <p id = "final_Score"></p>
+
+                    <!-- Painike seuraavaan kysymykseen siirtymiselle. -->
+
+                    <button type="button" onclick="NextQuestion()">Siirry seuraavaan tehtävään painamalla tästä.</button>
+                </section>
+
+                <section id="question_Section2">
+                    <div class="quiz_Container">
+                        <div id="quiz_Intro">
+                            <div class="quiz_Counter">
+                                <p class="prefix">Osio:</p>
+                                <h1 id="quiz_Counter">2/5</h1>
+                            </div>
+                            <div class="quiz_ScoreB">
+                                <p class="prefix">Pisteet osiosta:</p>
+                                <h1 id="quiz_ScoreB">0</h1>
+                            </div>    
+                            </div>
+                            <form>
+                                <h2>Mikä viikonpäivä on kyseessä?</h2>
+                                <p>Valitse valikosta englannin kielellä samaa tarkoittava viikonpäivä.</p>
+                                <label for="monday" class="questions2" text id ="monday">Maanantai</label>
+            
+                                <select name="monday" id="mondayQ">
+                                    <option onclick="incorrectB1()">Friday</option>
+                                    <option onclick="incorrectB1()">Thursday</option>
+                                    <option onclick="correctB1()">Monday</option>
+                                    <option onclick="incorrectB1()">Wednesday</option>
+                                    <option onclick="incorrectB1()">Tuesday</option>
+                                </select> 
+                                <p id="result2.1"></p>
+                                <p id="error2.1"></p>
+
+                                <label for="tuesday" class="questions2" text id ="tuesday">Tiistai</label>
+            
+                                <select name="tuesday" id="tuesdayQ">
+                                    <option onclick="incorrectB2()">Monday</option>
+                                    <option onclick="incorrectB2()">Thursday</option>
+                                    <option onclick="incorrectB2()">Wednesday</option>
+                                    <option onclick="correctB2()">Tuesday</option>
+                                    <option onclick="incorrectB2()">Friday</option>
+                                </select> 
+                                <p id="result2.2"></p>
+                                <p id="error2.2"></p>
+
+                                <label for="wednesday" class="questions2" text id ="wednesday">Keskiviikko</label>
+            
+                                <select name="wednesday" id="wednesdayQ">
+                                    <option onclick="incorrectB3()">Thursday</option>
+                                    <option onclick="correctB3()">Wednesday</option>
+                                    <option onclick="incorrectB3()">Monday</option>
+                                    <option onclick="incorrectB3()">Tuesday</option>
+                                    <option onclick="incorrectB3()">Friday</option>
+                                </select> 
+                                <p id="result2.3"></p>
+                                <p id="error2.3"></p>
+
+                                <label for="thursday" class="questions2" text id ="thursday">Torstai</label>
+            
+                                <select name="thursday" id="thursdayQ">
+                                    <option onclick="incorrectB4()">Tuesday</option>
+                                    <option onclick="correctB4()">Thursday</option>
+                                    <option onclick="incorrectB4()">Wednesday</option>
+                                    <option onclick="incorrectB4()">Monday</option>
+                                    <option onclick="incorrectB4()">Friday</option>
+                                </select> 
+                                <p id="result2.4"></p>
+                                <p id="error2.4"></p>
+
+                                <label for="friday" class="questions2" text id ="friday">Perjantai</label>
+            
+                                <select name="friday" id="fridayQ">
+                                    <option onclick="incorrectB5()">Wednesday</option>
+                                    <option onclick="incorrectB5()">Thursday</option>
+                                    <option onclick="incorrectB5()">Monday</option>
+                                    <option onclick="incorrectB5()">Tuesday</option>
+                                    <option onclick="correctB5()">Friday</option>
+                                </select> 
+                                <p id="result2.5"></p>
+                                <p id="error2.5"></p>
+                        <button type="button" onclick="visa02()">Tarkista vastaukset!</button>
+                        <p id="result2"></p>
+                      </form>
+                      <button type="button" onclick="NextQuestion2()">Siirry seuraavaan tehtävään painamalla tästä!</button>
+                </section>
+                
+                <section id="question_Section3">
+                    <div class="quiz_Container">
+                        <div id="quiz_Intro">
+                            <div class="quiz_Counter">
+                                <p class="prefix">Osio:</p>
+                                <h1 id="quiz_Counter">3/5</h1>
+                            </div>
+                            <div class="quiz_Score">
+                                <p class="prefix">Pisteet osiosta:</p>
+                                <h1 id="quiz_ScoreC">0</h1>
+                            </div>    
+                            </div>
+                            <form>
+                                <h2>Mikä kuukausi on kyseessä?</h2>
+                                <p>Valitse valikosta englannin kielellä samaa tarkoittava kuukausi.</p>
+                                <label for="january" class="questions3" text id ="january">Tammikuu</label>
+            
+                                <select name="january" id="januaryQ">
+                                    <option onclick="incorrectC1()">June</option>
+                                    <option onclick="incorrectC1()">May</option>
+                                    <option onclick="correctC1()">January</option>
+                                    <option onclick="incorrectC1()">December</option>
+                                    <option onclick="incorrectC1()">September</option>
+                                </select> 
+                                <p id="result3.1"></p>
+                                <p id="error3.1"></p>
+
+                                <label for="december" class="questions3" text id ="december">Joulukuu</label>
+            
+                                <select name="december" id="decemberQ">
+                                    <option onclick="incorrectC2()">May</option>
+                                    <option onclick="incorrectC2()">June</option>
+                                    <option onclick="incorrectC2()">January</option>
+                                    <option onclick="correctC2()">December</option>
+                                    <option onclick="incorrectC2()">September</option>
+                                </select> 
+                                <p id="result3.2"></p>
+                                <p id="error3.2"></p>
+
+                                <label for="june" class="questions3" text id ="june">Kesäkuu</label>
+            
+                                <select name="june" id="juneQ">
+                                    <option onclick="incorrectC3()">December</option>
+                                    <option onclick="correctC3()">June</option>
+                                    <option onclick="incorrectC3()">May</option>
+                                    <option onclick="incorrectC3()">January</option>
+                                    <option onclick="incorrectC3()">September</option>
+                                </select> 
+                                <p id="result3.3"></p>
+                                <p id="error3.3"></p>
+
+                                <label for="september" class="questions3" text id ="september">Syyskuu</label>
+            
+                                <select name="september" id="septemberQ">
+                                    <option onclick="incorrectC4()">January</option>
+                                    <option onclick="correctC4()">September</option>
+                                    <option onclick="incorrectC4()">May</option>
+                                    <option onclick="incorrectC4()">December</option>
+                                    <option onclick="incorrectC4()">June</option>
+                                </select> 
+                                <p id="result3.4"></p>
+                                <p id="error3.4"></p>
+
+                                <label for="may" class="questions3" text id ="may">Toukokuu</label>
+            
+                                <select name="may" id="mayQ">
+                                    <option onclick="incorrectC5()">September</option>
+                                    <option onclick="correctC5()">May</option>
+                                    <option onclick="incorrectC5()">December</option>
+                                    <option onclick="incorrectC5()">January</option>
+                                    <option onclick="incorrectC5()">June</option>
+                                </select> 
+                                <p id="result3.5"></p>
+                                <p id="error3.5"></p>
+                        <button type="button" onclick="visa03()">Tarkista vastaukset!</button>
+                        <p id="result3"></p>
+                      </form>
+                      <button type="button" onclick="NextQuestion3()">Siirry seuraavaan tehtävään painamalla tästä!</button>
+                </section>
+            
+                <section id="question_Section4">
+                    <div class="quiz_Container">
+                        <div id="quiz_Intro">
+                            <div class="quiz_Counter">
+                                <p class="prefix">Osio:</p>
+                                <h1 id="quiz_Counter">4/5</h1>
+                            </div>
+                            <div class="quiz_Score">
+                                <p class="prefix">Pisteet osiosta:</p>
+                                <h1 id="quiz_ScoreD">0</h1>
+                            </div>    
+                            </div>
+                    <form>
+                    <h2>Mitä näet kuvassa?</h2>
+                    <p>Valitse valikosta jokaisen kuvan kohdalta kyseistä kuvaa kuvaava sana.</p>
+
+                    <!-- https://pixabay.com -->
+
+                    <label for="flower" class="questions4" text id ="flower"><img src="../images/flower.jpg">
+                    </label>
+            
+                                <select name="flower" id="flowerQ">
+                                    <option onclick="incorrectD1()">plate</option>
+                                    <option onclick="incorrectD1()">yarn</option>
+                                    <option onclick="correctD1()">flower</option>
+                                </select> 
+                                <p id="result4.1"></p>
+                                <p id="error4.1"></p>
+
+                    <!-- https://pixabay.com/photos/fiber-yarn-skein-red-yarn-6193207/ -->
+
+                    <label for="yarn" class="questions4" text id ="yarn"><img src="../images/yarn.jpg">
+                    </label>
+                        
+                                <select name="yarn" id="yarnQ">
+                                    <option onclick="incorrectD2()">flower</option>
+                                    <option onclick="correctD2()">yarn</option>
+                                    <option onclick="incorrectD2()">plate</option>
+                                </select> 
+                                <p id="result4.2"></p>
+                                <p id="error4.2"></p>
+
+                    <!-- https://pixabay.com/photos/christmas-table-christmas-dinner-1926936/ -->
+
+                    <label for="plate" class="questions4" text id ="plate"><img src="../images/plate.jpg">
+                    </label>
+                                    
+                                <select name="plate" id="plateQ1">
+                                    <option onclick="incorrectD3()">yarn</option>
+                                    <option onclick="correctD3()">plate</option>
+                                    <option onclick="incorrectD3()">flower</option>
+                                </select> 
+                                <p id="result4.3"></p>
+                                <p id="error4.3"></p>              
+                    <button type="button" onclick="visa04()">Tarkista vastaukset!</button>
+                    <p id="result4"></p>
+                    <button type="button" onclick="NextQuestion4()">Siirry seuraavaan tehtävään painamalla tästä!</button>
+                    </form>
+                </section>
+
+                <section id="question_Section5">
+                    <div class="quiz_Container">
+                        <div id="quiz_Intro">
+                            <div class="quiz_Counter">
+                                <p class="prefix">Osio:</p>
+                                <h1 id="quiz_Counter">5/5</h1>
+                            </div>
+                            <div class="quiz_Score">
+                                <p class="prefix">Pisteet osiosta:</p>
+                                <h1 id="quiz_ScoreE">0</h1>
+                            </div>    
+                            </div>
+                    <h2>Mikä verbi kuvastaa GIF-animaatiota?</h2>
+                    <p>Valitse valikosta verbeistä kuvaavin jokaisen animaation kohdalla.</p>
+                </div>
+
+                <!-- Gifit on Canvan ilmaisesta versiosta. https://www.canva.com/ -->
+
+                <label for="paint" class="questions5" text id ="paint"><img src="../images/painting.gif">
+                </label>
+                                
+                            <select name="paint" id="paintQ">
+                                <option onclick="incorrectE1()">draw</option>
+                                <option onclick="correctE1()">paint</option>
+                                <option onclick="incorrectE1()">apply</option>
+                            </select> 
+                            <p id="result5.1"></p>
+                            <p id="error5.1"></p>
+                            
+                <label for="wave" class="questions5" text id ="wave"><img src="../images/wave.gif">
+                </label>
+                                            
+                            <select name="wave" id="waveQ">
+                                <option onclick="incorrectE2()">fluctuate</option>
+                                <option onclick="incorrectE2()">sign</option>
+                                <option onclick="correctE2()">wave</option>
+                            </select> 
+                            <p id="result5.2"></p>
+                            <p id="error5.2"></p> 
+
+                <label for="eat" class="questions5" text id ="eat"><img src="../images/eat.gif">
+                </label>
+                                                    
+                            <select name="eat" id="eatQ">
+                                <option onclick="incorrectE3()">sip</option>
+                                <option onclick="incorrectE3()">drink</option>
+                                <option onclick="correctE3()">eat</option>
+                            </select> 
+                            <p id="result5.3"></p>
+                            <p id="error5.3"></p> 
+
+                <button type="button" onclick="visa05()">Tarkista vastaukset!</button>
+                <p id="result5"></p>
+                <p id="error5"></p> 
+                    <button type="button" onclick="SubmitTheQuiz()" id="submitTheQuiz">Visan lopullinen tulos!</button>
+                    <p id = "resultsfortheQuiz1"></p>
+                    <p id = "resultsfortheQuiz2"></p>
+                    <p id = "resultsfortheQuiz3"></p>
+                    <p id = "resultsfortheQuiz4"></p>
+                    </div>
+                </section>
+
+                </main>
+                <script src = "../javascript/javas.js"></script>
+     
+    <!-- Add Bootstrap JS file -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
+</html>
