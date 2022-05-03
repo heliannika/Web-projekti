@@ -1,8 +1,9 @@
+// Toni Puirava, Ryhmä 15. 
 //Lähde https://www.codeexplained.dev/2018/10/create-multiple-choice-quiz-using-javascript.html
 
 
 
-// select all elements
+// Määritykset 
 const start = document.getElementById("start");
 const quiz = document.getElementById("quiz");
 const question = document.getElementById("question");
@@ -71,7 +72,7 @@ const gaugeWidth = 150; // 150px
 const gaugeUnit = gaugeWidth / questionTime;
 let score = 0;
 
-// render a question
+// esitetään kysymys 
 function renderQuestion(){
     let q = questions[runningQuestion];
     
@@ -83,7 +84,7 @@ function renderQuestion(){
 
 start.addEventListener("click",startQuiz);
 
-// start quiz
+// Aloitetaan visa
 function startQuiz(){
     document.getElementsByTagName("h1")[0].style.display = "none";
     start.style.display = "none";
@@ -95,7 +96,7 @@ function startQuiz(){
     
 }
 
-// render progress
+// Esitetään tämän hetkinen tulos 
 function renderProgress(){
     for(let qIndex = 0; qIndex <= lastQuestion; qIndex++){
         progress.innerHTML += "<div class='prog' id="+ qIndex +"></div>";
@@ -106,17 +107,17 @@ function renderProgress(){
 
 
 
-// checkAnwer
+// Vastauksen tarkistaminen 
 
 function checkAnswer(answer){
     if( answer == questions[runningQuestion].correct){
-        // answer is correct
+        // Vastaus on oikein 
         score++;
-        // change progress color to green
+        // Vaihdetaan tulostaulun pallon väriksi vihreä 
         answerIsCorrect();
     }else{
-        // answer is wrong
-        // change progress color to red
+        // Vastaus on väärin 
+        // Vaihdetaan tulostaulun pallon väriksi punainen 
         answerIsWrong();
     }
     count = 0;
@@ -124,7 +125,7 @@ function checkAnswer(answer){
         runningQuestion++;
         renderQuestion();
     }else{
-        // end the quiz and show the score
+        // Lopetaan visa ja lasketaan pisteet
         scoreRender();
     }
 }
@@ -139,14 +140,14 @@ function answerIsWrong(){
     document.getElementById(runningQuestion).style.backgroundColor = "#f00";
 }
 
-// score render
+// Tulos taulu
 function scoreRender(){
     scoreDiv.style.display = "block";
     
-    // calculate the amount of question percent answered by the user
+    // Lasketaan oikeat vastaukset
     const scorePerCent = Math.round(5 * score/questions.length);
     
-    // choose the image based on the scorePerCent
+    // Valitaan kuva oikeiden vastausten perusteella
     let img = (scorePerCent >= 5) ? "5.5.png" :
               (scorePerCent >= 4) ? "4.5.png" :
               (scorePerCent >= 3) ? "3.5.png" :
