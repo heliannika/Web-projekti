@@ -6,13 +6,6 @@ let thirdsec = document.getElementById("question_Section3");
 let fourthsec = document.getElementById("question_Section4");
 let fifthsec = document.getElementById("question_Section5");
 
-let blockResult1 = document.getElementById("2020");
-let blockResult2 = document.getElementById("resultsfortheQuiz2").style.display = "none";
-let blockResult3 = document.getElementById("resultsfortheQuiz3").style.display = "none";
-let blockResult4 = document.getElementById("resultsfortheQuiz4").style.display = "none";
-
-blockResult1.style.visibility = "hidden";
-
 // Ensimmäisen osion pisteiden muuttujan ja arvon määrittely nollaksi.
 
 let quiz_Score = 0;
@@ -486,7 +479,6 @@ function SubmitTheQuiz() {
 
    if (Final_Score == 20) {
        document.getElementById("resultsfortheQuiz1").innerHTML = "</br><i> Mahtavaa, vastasit kaikkiin kysymyksiin oikein!</i> 20/20";
-       blockResult1.style.visibility = "visible";
    } else if (Final_Score <= 19 && Final_Score >= 14) {
        document.getElementById("resultsfortheQuiz2").innerHTML = "</br><i> Hienoa työtä, kysymyksistä oikein oli </i>" + Final_Score + "/20.";
    } else if (Final_Score <= 13 && Final_Score >= 7) {
