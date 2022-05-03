@@ -127,10 +127,8 @@ div.container {
 }
 #scoreContainer{
     margin :auto;
-    width: 50%;
     background-color: white;
     width : 416px;
-    border-radius: 5px;
     box-shadow: 0px 5px 15px 0px;
     display: none;
     font-weight: bold;
