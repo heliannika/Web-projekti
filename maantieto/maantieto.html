@@ -49,112 +49,127 @@
   </header>
     <!--Visan sisältö Bootstrap-containerissa-->
     <div class="container">
-        <!--Ensimmäinen rivi, kysymykset 1 ja 2-->
         <div class="row">
-            <!--Kysymys 1-->
             <div class="col-sm-12 col-md-6">
-                <p>Kysymys 1:<br> Mikä seuraavista on maastossa esiintyvä painanne?</p>
+                <p class="kysymys">Kysymys 1:<br> Mikä vaihtoehdoista on painanne ts. kuoppa?</p>
                 <div>
                     <div id="yksi">
-                        <input type="radio" name="kys1" id="suppa"> 
-                        <label for="suppa">a) Suppa</label> <br>
-                        <input type="radio" name="kys1" id="harju">
-                        <label for="harju"> b) Harju</label> <br>
-                        <input type="radio" name="kys1" id="vaara"> 
-                        <label for="vaara"> c) Vaara</label> <br>
-                        <input type="radio" name="kys1" id="tunturi"> 
-                        <label for="tunturi"> d) Tunturi</label><br>
-                        <button type="button" onclick="kys1()">Tarkista</button>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <button type="button" onclick="suppa()">Suppa</button>
+                                <button type="button" onclick="harju()">Harju</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <button type="button" onclick="vaara()">Vaara</button>
+                                <button type="button" onclick="tunturi()">Tunturi</button>
+                            </div>
+                        </div>
                     </div>
                     <p id="palaute_yksi"></p>
                 </div>
             </div>
-            <!--Kysymys 2-->
             <div class="col-sm-12 col-md-6">
-                <p>Kysymys 2: <br>Mikä näistä maista kuuluu Afrikkaan?</p>
+                <p class="kysymys">Kysymys 2: <br>Mikä näistä maista kuuluu Afrikkaan?</p>
                 <div>
                     <div id="kaksi">
-                        <input type="radio" name="kys2" id="malta">
-                        <label for="malta"> a) Malta</label> <br>
-                        <input type="radio" name="kys2" id="saudi">
-                        <label for="saudi"> b) Saudi-Arabia</label> <br>
-                        <input type="radio" name="kys2" id="tasmania">
-                        <label for="tasmania"> c) Tasmania</label><br>
-                        <input type="radio" name="kys2" id="sambia">
-                        <label for="sambia"> d) Sambia</label> <br>
-                        <button type="button" onclick="kys2()">Tarkista</button>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <button type="button" onclick="malta()">Malta</button>
+                                <button type="button" onclick="saudi()">Saudi-Arabia</button>
+                            </div>
+                        </div>
+                         <div class="row">
+                            <div class="col-sm-12">
+                                <button type="button" onclick="tasmania()">Tasmania</button>
+                                <button type="button" onclick="sambia()">Sambia</button>
+                            </div> 
+                        </div>
                     </div>
                     <p id="palaute_kaksi"></p>
                 </div>
             </div>
         </div>
-        <!--Toinen rivi, kysymykset 3 ja 4-->
         <div class="row">
-            <!--Kysymys 3-->
             <div class="col-sm-12 col-md-6">
-                <p>Kysymys 3: <br> Suomen yleisin puulaji on?</p>
+                <p class="kysymys">Kysymys 3: <br> Suomen yleisin puulaji on?</p>
                 <div id="kolme">
-                    <input type="radio" name="kys3" id="koivu">
-                    <label for="koivu"> 1) Koivu</label><br>
-                    <input type="radio" name="kys3" id="mänty">
-                    <label for="mänty"> 2) Mänty</label> <br>
-                    <input type="radio" name="kys3" id="vaahtera">
-                    <label for="vaahtera"> 3) Vaahtera</label> <br>
-                    <input type="radio" name="kys3" id="kataja">
-                    <label for="kataja"> 4) Kataja</label> <br>
-                    <button type="button" onclick="kys3()">Tarkista</button>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <button type="button" onclick="koivu()">Koivu</button>
+                            <button type="button" onclick="mänty()">Mänty</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <button type="button" onclick="vaahtera()">Vaahtera</button>
+                            <button type="button" onclick="kataja()">Kataja</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!--Kysymys 4-->
             <div class="col-sm-12 col-md-6">
-                <p id>Kysymys 4: <br> Mikä seuraavista EI ole Suomen rajanaapuri?</p>
+                <p class="kysymys">Kysymys 4: <br> Valitse maa joka EI ole Suomen rajanaapuri?</p>
                 <div id="neljä">
-                    <input type="radio" name="kys4" id="norja">
-                    <label for="norja"> a) Norja</label> <br>
-                    <input type="radio" name="kys4" id="venäjä">
-                    <label for="venäjä"> b) Venäjä</label> <br>
-                    <input type="radio" name="kys4" id="latvia">
-                    <label for="latvia"> c) Latvia</label> <br>
-                    <input type="radio" name="kys4" id="ruotsi">
-                    <label for="ruotsi"> d) Ruotsi</label> <br>
-                    <button type="button" onclick="kys4()">Tarkista</button>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <button type="button" onclick="norja()">Norja</button>
+                            <button type="button" onclick="venäjä()">Venäjä</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <button type="button" onclick="latvia()">Latvia</button>
+                            <button type="button" onclick="ruotsi()">Ruotsi</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <!--Kolmas rivi, kysymys 5-->
         <div class="row">
-            <!--Kysymys 5-->
             <div class="col-sm-12 col-md-6">
-                <p>Kysymys 5: <br> Miksi kutsutaan jääkauden aikana kiven kallioon pyörittämää lieriönmuotoista kuoppaa?</p>
+                <p class="kysymys">Kysymys 5: <br> Miksi kutsutaan jääkauden aikana kiven kallioon pyörittämää lieriönmuotoista kuoppaa?</p>
                 <div id="viisi">
-                    <input type="radio" name="kys5" id="noita">
-                    <label for="noita"> a) Noidanpata</label> <br>
-                    <input type="radio" name="kys5" id="mörkö">
-                    <label for="mörkö"> b) Mörönmonttu</label> <br>
-                    <input type="radio" name="kys5" id="hiisi">
-                    <label for="hiisi"> c) Hiidenkirnu</label> <br>
-                    <input type="radio" name="kys5" id="peikko">
-                    <label for="peikko"> d) Peikonreikä</label> <br>
-                    <button type="button" onclick="kys5()">Tarkista</button>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <button type="button" onclick="noita()">Noidanpata</button>
+                            <button type="button" onclick="mörkö()">Mörönmonttu</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <button type="button" onclick="hiisi()">Hiidenkirnu</button>
+                            <button type="button" onclick="peikko()">Peikonreikä</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!--
-            <div class="col-sm-12 col-md-6">
-                <p>Kysymys 6: <br> Miten tämä testi toimii?</p>
-                <div id="kuusi">
-                    <button type="button" onclick="bra()">Hyvin</button> <br>
-                    <button type="button" onclick="dålig()">Huonosti</button> <br>
-                    <button type="button" onclick="surkea()">Hyvin huonosti</button>
-                </div>
+            <div id="kuusi" class="col-sm-12 col-md-6">
             </div>
-            -->
         </div>
-        <!--Palauterivi-->
         <div class="row">
             <div class="col-sm-12">
-                <h2>Vastasit oikein:</h2>
-                <p id="oikein"></p>
-                <button type="button" onclick="palaute()">Palaute</button>
+                <h2>Tässä näet mihin kysymyksiin vastasit oikein:</h2>
+                <div class="row">
+                    <div class="col-sm-12 col-md-1"></div>
+                    <div class="col-sm-12 col-md-2">
+                        <p id="oikein1">1</p>
+                    </div>
+                    <div class="col-sm-12 col-md-2">
+                        <p id="oikein2">2</p>
+                    </div>
+                    <div class="col-sm-12 col-md-2">
+                        <p id="oikein3">3</p>
+                    </div>
+                    <div class="col-sm-12 col-md-2">
+                        <p id="oikein4">4</p>
+                    </div>
+                    <div class="col-sm-12 col-md-2">
+                        <p id="oikein5">5</p>
+                    </div>
+                    <div class="col-sm-12 col-md-1"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -167,15 +182,8 @@
         </div>
     </footer>
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="script/mascript.js"></script>
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
   </body>
 </html>

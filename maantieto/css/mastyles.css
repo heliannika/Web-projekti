@@ -1,37 +1,53 @@
 /* Tuomas Polvinen */
 
-  header {
-      padding: 20px;
-      margin: auto;
-      margin-top: 20px;
-      width: 70%;
-      background-color: #ffffff;
-      opacity: 0.6;
-      text-align: center;
+header {
+    padding: 20px;
+    margin: auto;
+    margin-top: 20px;
+    width: 70%;
+    background-color: #ffffff;
+    opacity: 0.6;
+    text-align: center;
 
-  }
+}
 
-  footer {
-      padding: 20px;
-      margin: auto;
-      width: 70%;
-      background-color: #ffffff;
-      opacity: 0.6;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      text-align: right;
-  }
+footer {
+    padding: 20px;
+    margin: auto;
+    width: 70%;
+    background-color: #ffffff;
+    opacity: 0.6;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+}
 
-  button {
-      background-color: orange;
-      opacity: 1;
-      margin-top: 20px;
-  }
+button {
+    background-color: orange;
+    opacity: 1;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 130px;
+}
 
-  @media only screen and (max-width: 768px) {
-      .poes {
-        display: none;
-      }
+.kysymys {
+    font-weight: bold;
+}
+
+#kuusi {
+    opacity: 1;
+    background-image: url(../img/tunturi.jpg); /* Tunturikuva Pixabaysta */
+    background-size: cover;
+    min-height: 270px;
+}
+
+@media only screen and (max-width: 768px) {
+  .poes {
+      display: none;
   }
+  #kuusi {
+      display: none;
+  }
+}
 
   
