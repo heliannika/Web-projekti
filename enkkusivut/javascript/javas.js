@@ -1,10 +1,10 @@
-// Muuttujat jokaiselle kysymysosiolle, joita pystyy hyödyntämään sivuston skrollaustoiminnossa.
-
 let firstsec = document.getElementById("question_Section1");
 let secondsec = document.getElementById("question_Section2");
 let thirdsec = document.getElementById("question_Section3");
 let fourthsec = document.getElementById("question_Section4");
-let fifthsec = document.getElementById("question_Section5");
+let fifthsec = document.getElementById("question_Section5");// Muuttujat jokaiselle kysymysosiolle, joita pystyy hyödyntämään sivuston skrollaustoiminnossa.
+
+
 
 // Ensimmäisen osion pisteiden muuttujan ja arvon määrittely nollaksi.
 
