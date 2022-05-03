@@ -17,7 +17,6 @@ div.container {
     width: 70%;
     text-align: center;
     align-content: space-around;
-    float: center;
 }
 
 .navbar {
@@ -66,7 +65,17 @@ button {
     min-height: 270px;
 }
 
+h2 {
+    margin-top: 20px;
+}
 
+#uudestaan {
+    width: 150px;
+    height: 50px;
+}
+
+/* Jättää pienellä näytöllä ainoastaan nimen footeriin
+    ja hävittää koristekuvan. */
 
 @media only screen and (max-width: 768px) {
   .poes {

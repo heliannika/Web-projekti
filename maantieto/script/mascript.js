@@ -6,24 +6,33 @@
 const smile = '<img alt="smile" src="img/smile.png">';
 const sad = '<img alt="sad" src="img/sad.png">';
 
+// Javascriptin selitykset kahdessa ensimmäisessä funktiossa, toiminallisuudet samat seuraavissa.
+
 // Ensimmäisen kysymyksen painikkeet
 
 function suppa() {
+    // Tyhjentää vastauspainikkeet
     document.getElementById("yksi").innerHTML="";
+    // Antaa palautetta vastauksesta. Tässä tapauksessa oikein, kertoo lisää vastauksesta.
     document.getElementById("palaute_yksi").innerHTML=
     "Vastasit oikein." + "<br/>" + 
     "Supat ovat syntynyt jääkauden jälkeen jäämöykkyjen painaessa maahan kuopan.";
+    // Teksti vihreäksi oikean vastauksen merkiksi.
     document.getElementById("palaute_yksi").style.color = "green";
+    // Palautekenttään tulostuu hymynaama oikeasta vastauksesta. 
     document.getElementById("oikein1").innerHTML+=smile;
 }
 
 function harju() {
     document.getElementById("yksi").innerHTML="";
+    // Väärästä vastauksesta kenttään tulostuu palaute, selitys vastauksesta ja kerrotaan oikea vastaus.
     document.getElementById("palaute_yksi").innerHTML=
     "Vastasit väärin." + "<br/>" + 
     "Harju on pitkä ja usein mutkitteleva kohoumamuodostuma." + "<br/>" + 
     "Oikea vastaus on suppa.";
+    // Teksti punaiseksi väärän vastauksen merkiksi.
     document.getElementById("palaute_yksi").style.color = "red";
+    // Palautekenttään tulostuu surunaama väärän vastauksen johdosta.
     document.getElementById("oikein1").innerHTML+=sad;
 }
 
@@ -97,7 +106,7 @@ function koivu() {
     document.getElementById("kolme").innerHTML="";
     document.getElementById("palaute_kolme").innerHTML=
     "Vastasit väärin." + "<br/>" + 
-    "Koivu on Suomen yleisin lehtipuu, mutta vasta kolmenneksi yleisin puulaji." + "<br/" + 
+    "Koivu on Suomen yleisin lehtipuu, mutta vasta kolmenneksi yleisin puulaji." + "<br/>" + 
     "Oikea vastaus on mänty.";
     document.getElementById("palaute_kolme").style.color = "red";
     document.getElementById("oikein3").innerHTML+=sad;
@@ -116,7 +125,7 @@ function kataja() {
     document.getElementById("kolme").innerHTML="";
     document.getElementById("palaute_kolme").innerHTML=
     "Vastasit väärin." + "<br/>" + 
-    "Kataja on puu, vaikka moni mieltää sen pensaaksi." + "<br/" + 
+    "Kataja on puu, vaikka moni mieltää sen pensaaksi." + "<br/>" + 
     "Oikea vastaus on mänty.";
     document.getElementById("palaute_kolme").style.color = "red";
     document.getElementById("oikein3").innerHTML+=sad;
@@ -126,7 +135,7 @@ function vaahtera() {
     document.getElementById("kolme").innerHTML="";
     document.getElementById("palaute_kolme").innerHTML=
     "Vastasit väärin." + "<br/>" + 
-    "Vaahteroita kasvaa lähinnä eteläisessä osassa maata." + "<br/" + 
+    "Vaahteroita kasvaa lähinnä eteläisessä osassa maata." + "<br/>" + 
     "Oikea vastaus on mänty.";
     document.getElementById("palaute_kolme").style.color = "red";
     document.getElementById("oikein3").innerHTML+=sad;
