@@ -155,5 +155,5 @@ function scoreRender(){
               "0.5.png";
     
     scoreDiv.innerHTML = "<img src="+ img +">";
-    scoreDiv.innerHTML += "Vastasit oikein "+ scorePerCent + " kysymykseen." + "<br>" + "Oikeat ratkaisut;"+ "<br>" + "<br>" + Tehtävä1 + "<br>" + "<br>" + Tehtävä2+ "<br>"+ "<br>" + Tehtävä3+ "<br>"+ "<br>" + Tehtävä4+ "<br>"+ "<br>" + Tehtävä5;
+    scoreDiv.innerHTML += "Vastasit oikein "+ scorePerCent + " kysymykseen." + "<br>" + "Oikeat ratkaisut;"+ "<br>" + "<br>" + Tehtävä1 + "<br>" + "<br>" + Tehtävä2+ "<br>"+ "<br>" + Tehtävä3+ "<br>"+ "<br>" + Tehtävä4+ "<br>"+ "<br>" + Tehtävä5 +"<br>"+"<br>"+"<br>"+"<br>";
 }
