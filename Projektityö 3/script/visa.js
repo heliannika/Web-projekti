@@ -146,12 +146,12 @@ function scoreRender(){
     // lasketaan oikeat vastaukset 
     const scorePerCent = Math.round(5 * score/questions.length);
     
-    // Valitaan kuva pisteiden mukaan 
-    let img = (scorePerCent >= 5) ? "../img/5.5.png" :
-              (scorePerCent >= 4) ? "../img/4.5.png" :
-              (scorePerCent >= 3) ? "../img/3.5.png" :
-              (scorePerCent >= 2) ? "../img/2.5.png" :
-              (scorePerCent >= 1) ? "../img/1.5.png" :
+    // Valitaan kuva pisteiden mukaan '<img alt="smile" src="img/smile.png">'
+    let img = (scorePerCent >= 5) ? "img/5.5.png" :
+              (scorePerCent >= 4) ? "img/4.5.png" :
+              (scorePerCent >= 3) ? "img/3.5.png" :
+              (scorePerCent >= 2) ? "img/2.5.png" :
+              (scorePerCent >= 1) ? "img/1.5.png" :
               "0.5.png";
     
     scoreDiv.innerHTML = "<img src="+ img +">";
