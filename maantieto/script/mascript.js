@@ -21,8 +21,8 @@ function harju() {
     document.getElementById("yksi").innerHTML="";
     document.getElementById("palaute_yksi").innerHTML=
     "Vastasit väärin." + "<br/>" + 
-    "Harju on pitkä ja usein mutkitteleva kohoumamuodostuma."
-    + "<br/" + "Oikea vastaus on suppa.";
+    "Harju on pitkä ja usein mutkitteleva kohoumamuodostuma." + "<br/>" + 
+    "Oikea vastaus on suppa.";
     document.getElementById("palaute_yksi").style.color = "red";
     document.getElementById("oikein1").innerHTML+=sad;
 }
@@ -31,8 +31,8 @@ function vaara() {
     document.getElementById("yksi").innerHTML="";
     document.getElementById("palaute_yksi").innerHTML=
     "Vastasit väärin." + "<br/>" + 
-    "Vaara Itä-Suomessa käytetty nimitys kivisille mäille."
-    + "<br/" + "Oikea vastaus on suppa.";
+    "Vaara Itä-Suomessa käytetty nimitys kivisille mäille." + "<br/>" + 
+    "Oikea vastaus on suppa.";
     document.getElementById("palaute_yksi").style.color = "red";
     document.getElementById("oikein1").innerHTML+=sad;
 }
@@ -41,8 +41,8 @@ function tunturi() {
     document.getElementById("yksi").innerHTML="";
     document.getElementById("palaute_yksi").innerHTML=
     "Vastasit väärin." + "<br/>" + 
-    "Tunturiksi kutsutaan Lapissa kohoavia vuoria."
-    + "<br/" + "Oikea vastaus on suppa.";
+    "Tunturiksi kutsutaan Lapissa kohoavia vuoria." + "<br/>" + 
+    "Oikea vastaus on suppa.";
     document.getElementById("palaute_yksi").style.color = "red";
     document.getElementById("oikein1").innerHTML+=sad;
 }
@@ -54,8 +54,8 @@ function malta() {
     document.getElementById("kaksi").innerHTML="";
     document.getElementById("palaute_kaksi").innerHTML=
     "Vastasit väärin." + "<br/>" + 
-    "Malta on eurooppalainen saarivaltio Välimerellä."
-    + "<br/" + "Oikea vastaus on Sambia.";
+    "Malta on eurooppalainen saarivaltio Välimerellä." + "<br/>" + 
+    "Oikea vastaus on Sambia.";
     document.getElementById("palaute_kaksi").style.color = "red";
     document.getElementById("oikein2").innerHTML+=sad;
 }
@@ -64,8 +64,8 @@ function saudi() {
     document.getElementById("kaksi").innerHTML="";
     document.getElementById("palaute_kaksi").innerHTML=
     "Vastasit väärin." + "<br/>" + 
-    "Saudi-Arabia on valtio Lähi-idässä."
-    + "<br/" + "Oikea vastaus on Sambia.";
+    "Saudi-Arabia on valtio Lähi-idässä." + "<br/>" + 
+    "Oikea vastaus on Sambia.";
     document.getElementById("palaute_kaksi").style.color = "red";
     document.getElementById("oikein2").innerHTML+=sad;
 }
@@ -74,8 +74,8 @@ function tasmania() {
     document.getElementById("kaksi").innerHTML="";
     document.getElementById("palaute_kaksi").innerHTML=
     "Vastasit väärin." + "<br/>" + 
-    "Tasmania on Australiaan kuuluva saari."
-    + "<br/" + "Oikea vastaus on Sambia.";
+    "Tasmania on Australiaan kuuluva saari." + "<br/>" + 
+    "Oikea vastaus on Sambia.";
     document.getElementById("palaute_kaksi").style.color = "red";
     document.getElementById("oikein2").innerHTML+=sad;
 }
@@ -97,8 +97,8 @@ function koivu() {
     document.getElementById("kolme").innerHTML="";
     document.getElementById("palaute_kolme").innerHTML=
     "Vastasit väärin." + "<br/>" + 
-    "Koivu on Suomen yleisin lehtipuu, mutta vasta kolmenneksi yleisin puulaji."
-    + "<br/" + "Oikea vastaus on mänty.";
+    "Koivu on Suomen yleisin lehtipuu, mutta vasta kolmenneksi yleisin puulaji." + "<br/" + 
+    "Oikea vastaus on mänty.";
     document.getElementById("palaute_kolme").style.color = "red";
     document.getElementById("oikein3").innerHTML+=sad;
 }
@@ -116,8 +116,8 @@ function kataja() {
     document.getElementById("kolme").innerHTML="";
     document.getElementById("palaute_kolme").innerHTML=
     "Vastasit väärin." + "<br/>" + 
-    "Kataja on puu, vaikka moni mieltää sen pensaaksi."
-    + "<br/" + "Oikea vastaus on mänty.";
+    "Kataja on puu, vaikka moni mieltää sen pensaaksi." + "<br/" + 
+    "Oikea vastaus on mänty.";
     document.getElementById("palaute_kolme").style.color = "red";
     document.getElementById("oikein3").innerHTML+=sad;
 }
@@ -126,8 +126,8 @@ function vaahtera() {
     document.getElementById("kolme").innerHTML="";
     document.getElementById("palaute_kolme").innerHTML=
     "Vastasit väärin." + "<br/>" + 
-    "Vaahteroita kasvaa lähinnä eteläisessä osassa maata."
-    + "<br/" + "Oikea vastaus on mänty.";
+    "Vaahteroita kasvaa lähinnä eteläisessä osassa maata." + "<br/" + 
+    "Oikea vastaus on mänty.";
     document.getElementById("palaute_kolme").style.color = "red";
     document.getElementById("oikein3").innerHTML+=sad;
 }
@@ -181,7 +181,7 @@ function mörkö() {
     document.getElementById("palaute_viisi").innerHTML=
     "Vastasit väärin." + "<br/>" + 
     "Mörönmonttu on visan tekijän keksintöä." + "<br/>" + 
-    "Oikea vastaus on hiidenkirnu."
+    "Oikea vastaus on hiidenkirnu.";
     document.getElementById("palaute_viisi").style.color = "red";
     document.getElementById("oikein5").innerHTML+=sad;
 }
@@ -191,7 +191,7 @@ function noita() {
     document.getElementById("palaute_viisi").innerHTML=
     "Vastasit väärin." + "<br/>" + 
     "Noidanpata on visan tekijän keksintöä." + "<br/>" + 
-    "Oikea vastaus on hiidenkirnu."
+    "Oikea vastaus on hiidenkirnu.";
     document.getElementById("palaute_viisi").style.color = "red";
     document.getElementById("oikein5").innerHTML+=sad;
 }
@@ -201,7 +201,7 @@ function peikko() {
     document.getElementById("palaute_viisi").innerHTML=
     "Vastasit väärin." + "<br/>" + 
     "Peikonreikä on visan tekijän keksintöä." + "<br/>" + 
-    "Oikea vastaus on hiidenkirnu."
+    "Oikea vastaus on hiidenkirnu.";
     document.getElementById("palaute_viisi").style.color = "red";
     document.getElementById("oikein5").innerHTML+=sad;
 }
@@ -211,7 +211,7 @@ function hiisi() {
     document.getElementById("palaute_viisi").innerHTML=
     "Vastasit oikein!" + "<br/>" + 
     "Hiidenkirnu syntyi jääkauden aikana kysymyksessä kuvatulla tavalla." + "<br/>" + 
-    "Muut vastausvaihtoehdot ovat visan tekijän mielikuvituksen tuotetta."
+    "Muut vastausvaihtoehdot ovat visan tekijän mielikuvituksen tuotetta.";
     document.getElementById("palaute_viisi").style.color = "green";
     document.getElementById("oikein5").innerHTML+=smile;
 }
