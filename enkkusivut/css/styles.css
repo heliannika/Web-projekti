@@ -37,7 +37,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    margin-bottom: 50px;
 }
 
 div.container {
@@ -112,7 +111,6 @@ img {
 
 #resultsfortheQuiz {
     margin-top: 1.5em;
-    margin-bottom: 1.5em;
     border-top: burlywood 3px dotted;
 }
 
@@ -124,4 +122,11 @@ img {
 #submitTheQuiz:hover {
     background-color: orange;
     border-color: orange;
+}
+
+footer {
+    background-color: burlywood;
+    height: 3em;
+    width: 100%;
+    text-align: center;
 }
