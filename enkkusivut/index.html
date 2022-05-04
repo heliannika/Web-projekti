@@ -70,7 +70,6 @@
                                 <h1 id="quiz_Score">0</h1>
                             </div>    
                             </div>
-                            <form>
 
                                 <!-- Kysymys & tehtävän anto. -->
 
@@ -83,47 +82,40 @@
 
                                 <!-- Vastausvaihtoehtojen määrittelyt dropdown -valikkoon. -->
             
-                                <select name="fork" id="forkQ">
-                                    <option onclick="incorrect()" value = "0">spoon</option>
-                                    <option onclick="incorrect()" value = "0">knife</option>
-                                    <option onclick="correctA1()" value = "1">fork</option>
-                                </select> 
+                                    <button id = "forkinCorrect" onclick="väärähaarukka()" value = "haarukkaväärin1">spoon</button>
+                                    <button id = "forkinCorrect2" onclick="väärähaarukka()" value = "haarukkaväärin">knife</button>
+                                    <button id = "forkCorrect" onclick="oikeahaarukka()" value = "haarukkaoikein">fork</button>
 
                                 <!-- Palautteiden tulostuselementit. -->
 
-                                <p id="result1.1"></p>
+                                <p id="result1.first"></p>
                                 <p id="error1.1"></p>
                                 
-                                <label for="plate" class="questions" text id ="plate">Lautanen</label>
+                                <label for="plate" class="questions">Lautanen</label>
             
-                                <select name="plate" id="plateQ">
-                                    <option onclick="correctA2()">plate</option>
-                                    <option onclick="incorrect2()">cup</option>
-                                    <option onclick="incorrect2()">fork</option>
-                                </select> 
+                                    <button id = "plateCorrect" onclick="correctA2()">plate</button>
+                                    <button id = "plateinCorrect" onclick="incorrect2()">cup</button>
+                                    <button id = "plateinCorrect2" onclick="incorrect2()">fork</button>
+                                
                                 <p id="result1.2"></p>
                                 <p id="error1.2"></p>
 
-                                <label for="kitchen" class="questions" text id ="kitchen">Keittiö</label>
+                                <label for="kitchen" class="questions">Keittiö</label>
             
-                                <select name="kitchen" id="kitchenQ">
-                                    <option onclick="incorrect3()">fork</option>
-                                    <option onclick="correctA3()">kitchen</option>
-                                    <option onclick="incorrect3()">bowl</option>
-                                </select> 
+                                    <button id = "kitcheninCorrect" onclick="incorrect3()">fork</button>
+                                    <button id = "kitchenCorrect" onclick="correctA3()">kitchen</button>
+                                    <button id = "kitcheninCorrect2" onclick="incorrect3()">bowl</button>
+                                 
                                 <p id="result1.3"></p>
                                 <p id="error1.3"></p>
 
-                                <label for="bowl" class="questions" text id ="bowl">Kulho</label>
-            
-                                <select name="bowl" id="bowlQ">
-                                    <option onclick="incorrect4()">kitchen</option>
-                                    <option onclick="incorrect4()">plate</option>
-                                    <option onclick="correctA4()">bowl</option>
-                                </select> 
+                                <label for="bowl" class="questions">Kulho</label>
+                                    <button id = "bowlinCorrect" onclick="incorrect4()">kitchen</button>
+                                    <button id = "bowlinCorrect2" onclick="incorrect4()">plate</button>
+                                    <button id = "bowlCorrect" onclick="correctA4()">bowl</button>
+                                
                                 <p id="result1.4"></p>
                                 <p id="error1.4"></p>
-                                </form>
 
                                 <!-- Painike pisteiden tulostukseen. -->
 
@@ -153,63 +145,58 @@
                             <form>
                                 <h2>Mikä viikonpäivä on kyseessä?</h2>
                                 <p>Valitse valikosta englannin kielellä samaa tarkoittava viikonpäivä.</p>
-                                <label for="monday" class="questions2" text id ="monday">Maanantai</label>
+                                <label for="monday" class="questions2">Maanantai</label>
             
-                                <select name="monday" id="mondayQ">
-                                    <option onclick="incorrectB1()">Friday</option>
-                                    <option onclick="incorrectB1()">Thursday</option>
-                                    <option onclick="correctB1()">Monday</option>
-                                    <option onclick="incorrectB1()">Wednesday</option>
-                                    <option onclick="incorrectB1()">Tuesday</option>
-                                </select> 
+                                    <button id = "moninCorrect1" onclick="incorrectB1()">Friday</button>
+                                    <button id = "moninCorrect2" onclick="incorrectB1()">Thursday</button>
+                                    <button id = "monCorrect" onclick="correctB1()">Monday</button>
+                                    <button id = "moninCorrect3" onclick="incorrectB1()">Wednesday</button>
+                                    <button id = "moninCorrect4" onclick="incorrectB1()">Tuesday</button>
+
                                 <p id="result2.1"></p>
                                 <p id="error2.1"></p>
 
-                                <label for="tuesday" class="questions2" text id ="tuesday">Tiistai</label>
+                                <label for="tuesday" class="questions2">Tiistai</label>
             
-                                <select name="tuesday" id="tuesdayQ">
-                                    <option onclick="incorrectB2()">Monday</option>
-                                    <option onclick="incorrectB2()">Thursday</option>
-                                    <option onclick="incorrectB2()">Wednesday</option>
-                                    <option onclick="correctB2()">Tuesday</option>
-                                    <option onclick="incorrectB2()">Friday</option>
-                                </select> 
+                                    <button id = "tueinCorrect1" onclick="incorrectB2()">Monday</button>
+                                    <button id = "tueinCorrect2" onclick="incorrectB2()">Thursday</button>
+                                    <button id = "tueinCorrect3" onclick="incorrectB2()">Wednesday</button>
+                                    <button id = "tueCorrect" onclick="correctB2()">Tuesday</button>
+                                    <button id = "tueinCorrect4" onclick="incorrectB2()">Friday</button>
+ 
                                 <p id="result2.2"></p>
                                 <p id="error2.2"></p>
 
-                                <label for="wednesday" class="questions2" text id ="wednesday">Keskiviikko</label>
+                                <label for="wednesday" class="questions2">Keskiviikko</label>
             
-                                <select name="wednesday" id="wednesdayQ">
-                                    <option onclick="incorrectB3()">Thursday</option>
-                                    <option onclick="correctB3()">Wednesday</option>
-                                    <option onclick="incorrectB3()">Monday</option>
-                                    <option onclick="incorrectB3()">Tuesday</option>
-                                    <option onclick="incorrectB3()">Friday</option>
-                                </select> 
+                                    <button id = "wedinCorrect1" onclick="incorrectB3()">Thursday</button>
+                                    <button id = "wedCorrect" onclick="correctB3()">Wednesday</button>
+                                    <button id = "wedinCorrect2" onclick="incorrectB3()">Monday</button>
+                                    <button id = "wedinCorrect3" onclick="incorrectB3()">Tuesday</button>
+                                    <button id = "wedinCorrect4" onclick="incorrectB3()">Friday</button>
+
                                 <p id="result2.3"></p>
                                 <p id="error2.3"></p>
 
-                                <label for="thursday" class="questions2" text id ="thursday">Torstai</label>
+                                <label for="thursday" class="questions2">Torstai</label>
             
-                                <select name="thursday" id="thursdayQ">
-                                    <option onclick="incorrectB4()">Tuesday</option>
-                                    <option onclick="correctB4()">Thursday</option>
-                                    <option onclick="incorrectB4()">Wednesday</option>
-                                    <option onclick="incorrectB4()">Monday</option>
-                                    <option onclick="incorrectB4()">Friday</option>
-                                </select> 
+                                    <button id = "thurinCorrect1" onclick="incorrectB4()">Tuesday</button>
+                                    <button id = "thurCorrect" onclick="correctB4()">Thursday</button>
+                                    <button id = "thurinCorrect2" onclick="incorrectB4()">Wednesday</button>
+                                    <button id = "thurinCorrect3" onclick="incorrectB4()">Monday</button>
+                                    <button id = "thurinCorrect4" onclick="incorrectB4()">Friday</button>
+
                                 <p id="result2.4"></p>
                                 <p id="error2.4"></p>
 
-                                <label for="friday" class="questions2" text id ="friday">Perjantai</label>
+                                <label for="friday" class="questions2">Perjantai</label>
             
-                                <select name="friday" id="fridayQ">
-                                    <option onclick="incorrectB5()">Wednesday</option>
-                                    <option onclick="incorrectB5()">Thursday</option>
-                                    <option onclick="incorrectB5()">Monday</option>
-                                    <option onclick="incorrectB5()">Tuesday</option>
-                                    <option onclick="correctB5()">Friday</option>
-                                </select> 
+                                    <button id = "friinCorrect1" onclick="incorrectB5()">Wednesday</button>
+                                    <button id = "friinCorrect2" onclick="incorrectB5()">Thursday</button>
+                                    <button id = "friinCorrect3" onclick="incorrectB5()">Monday</button>
+                                    <button id = "friinCorrect4" onclick="incorrectB5()">Tuesday</button>
+                                    <button id = "friCorrect" onclick="correctB5()">Friday</button>
+
                                 <p id="result2.5"></p>
                                 <p id="error2.5"></p>
                         <button type="button" onclick="visa02()">Tarkista vastaukset!</button>
@@ -233,63 +220,58 @@
                             <form>
                                 <h2>Mikä kuukausi on kyseessä?</h2>
                                 <p>Valitse valikosta englannin kielellä samaa tarkoittava kuukausi.</p>
-                                <label for="january" class="questions3" text id ="january">Tammikuu</label>
-            
-                                <select name="january" id="januaryQ">
-                                    <option onclick="incorrectC1()">June</option>
-                                    <option onclick="incorrectC1()">May</option>
-                                    <option onclick="correctC1()">January</option>
-                                    <option onclick="incorrectC1()">December</option>
-                                    <option onclick="incorrectC1()">September</option>
-                                </select> 
+                                <label for="january" class="questions3">Tammikuu</label>
+    
+                                    <button id = "janinCorrect1" onclick="incorrectC1()">June</button>
+                                    <button id = "janinCorrect2" onclick="incorrectC1()">May</button>
+                                    <button id = "janCorrect" onclick="correctC1()">January</button>
+                                    <button id = "janinCorrect3" onclick="incorrectC1()">December</button>
+                                    <button id = "janinCorrect4" onclick="incorrectC1()">September</button>
+
                                 <p id="result3.1"></p>
                                 <p id="error3.1"></p>
 
-                                <label for="december" class="questions3" text id ="december">Joulukuu</label>
+                                <label for="december" class="questions3">Joulukuu</label>
             
-                                <select name="december" id="decemberQ">
-                                    <option onclick="incorrectC2()">May</option>
-                                    <option onclick="incorrectC2()">June</option>
-                                    <option onclick="incorrectC2()">January</option>
-                                    <option onclick="correctC2()">December</option>
-                                    <option onclick="incorrectC2()">September</option>
-                                </select> 
+                                    <button id = "decinCorrect1" onclick="incorrectC2()">May</button>
+                                    <button id = "decinCorrect2" onclick="incorrectC2()">June</button>
+                                    <button id = "decinCorrect3" onclick="incorrectC2()">January</button>
+                                    <button id = "decCorrect" onclick="correctC2()">December</button>
+                                    <button id = "decinCorrect4" onclick="incorrectC2()">September</button>
+    
                                 <p id="result3.2"></p>
                                 <p id="error3.2"></p>
 
-                                <label for="june" class="questions3" text id ="june">Kesäkuu</label>
-            
-                                <select name="june" id="juneQ">
-                                    <option onclick="incorrectC3()">December</option>
-                                    <option onclick="correctC3()">June</option>
-                                    <option onclick="incorrectC3()">May</option>
-                                    <option onclick="incorrectC3()">January</option>
-                                    <option onclick="incorrectC3()">September</option>
-                                </select> 
+                                <label for="june" class="questions3">Kesäkuu</label>
+
+                                    <button id = "juneinCorrect1" onclick="incorrectC3()">December</button>
+                                    <button id = "juneCorrect" onclick="correctC3()">June</button>
+                                    <button id = "juneinCorrect2" onclick="incorrectC3()">May</button>
+                                    <button id = "juneinCorrect3" onclick="incorrectC3()">January</button>
+                                    <button id = "juneinCorrect4" onclick="incorrectC3()">September</button>
+ 
                                 <p id="result3.3"></p>
                                 <p id="error3.3"></p>
 
-                                <label for="september" class="questions3" text id ="september">Syyskuu</label>
+                                <label for="september" class="questions3">Syyskuu</label>
             
-                                <select name="september" id="septemberQ">
-                                    <option onclick="incorrectC4()">January</option>
-                                    <option onclick="correctC4()">September</option>
-                                    <option onclick="incorrectC4()">May</option>
-                                    <option onclick="incorrectC4()">December</option>
-                                    <option onclick="incorrectC4()">June</option>
-                                </select> 
+                                    <button id = "sepinCorrect1" onclick="incorrectC4()">January</button>
+                                    <button id = "sepCorrect" onclick="correctC4()">September</button>
+                                    <button id = "sepinCorrect2" onclick="incorrectC4()">May</button>
+                                    <button id = "sepinCorrect3" onclick="incorrectC4()">December</button>
+                                    <button id = "sepinCorrect4" onclick="incorrectC4()">June</button>
+
                                 <p id="result3.4"></p>
                                 <p id="error3.4"></p>
 
-                                <label for="may" class="questions3" text id ="may">Toukokuu</label>
+                                <label for="may" class="questions3">Toukokuu</label>
             
-                                <select name="may" id="mayQ">
-                                    <option onclick="incorrectC5()">September</option>
-                                    <option onclick="correctC5()">May</option>
-                                    <option onclick="incorrectC5()">December</option>
-                                    <option onclick="incorrectC5()">January</option>
-                                    <option onclick="incorrectC5()">June</option>
-                                </select> 
+                                    <button id = "mayinCorrect1" onclick="incorrectC5()">September</button>
+                                    <button id = "mayCorrect" onclick="correctC5()">May</button>
+                                    <button id = "mayinCorrect2" onclick="incorrectC5()">December</button>
+                                    <button id = "mayinCorrect3" onclick="incorrectC5()">January</button>
+                                    <button id = "mayinCorrect4"onclick="incorrectC5()">June</button>
+
                                 <p id="result3.5"></p>
                                 <p id="error3.5"></p>
                         <button type="button" onclick="visa03()">Tarkista vastaukset!</button>
@@ -316,40 +298,37 @@
 
                     <!-- https://pixabay.com -->
 
-                    <label for="flower" class="questions4" text id ="flower"><img src="../enkkusivut/images/flower.jpg">
+                    <label for="flower" class="questions4"><img src="../enkkusivut/images/flower.jpg">
                     </label>
             
-                                <select name="flower" id="flowerQ">
-                                    <option onclick="incorrectD1()">plate</option>
-                                    <option onclick="incorrectD1()">yarn</option>
-                                    <option onclick="correctD1()">flower</option>
-                                </select> 
+                                    <button id = "flowerinCorrect1" onclick="incorrectD1()">plate</button>
+                                    <button id = "flowerinCorrect2" onclick="incorrectD1()">yarn</button>
+                                    <button id = "flowerCorrect" onclick="correctD1()">flower</button>
+
                                 <p id="result4.1"></p>
                                 <p id="error4.1"></p>
 
                     <!-- https://pixabay.com/photos/fiber-yarn-skein-red-yarn-6193207/ -->
 
-                    <label for="yarn" class="questions4" text id ="yarn"><img src="../enkkusivut/images/yarn.jpg">
+                    <label for="yarn" class="questions4"><img src="../enkkusivut/images/yarn.jpg">
                     </label>
                         
-                                <select name="yarn" id="yarnQ">
-                                    <option onclick="incorrectD2()">flower</option>
-                                    <option onclick="correctD2()">yarn</option>
-                                    <option onclick="incorrectD2()">plate</option>
-                                </select> 
+                                    <button id = "yarninCorrect1" onclick="incorrectD2()">flower</button>
+                                    <button id = "yarnCorrect" onclick="correctD2()">yarn</button>
+                                    <button id = "yarninCorrect2" onclick="incorrectD2()">plate</button>
+
                                 <p id="result4.2"></p>
                                 <p id="error4.2"></p>
 
                     <!-- https://pixabay.com/photos/christmas-table-christmas-dinner-1926936/ -->
 
-                    <label for="plate" class="questions4" text id ="plate"><img src="../enkkusivut/images/plate.jpg">
+                    <label for="plate" class="questions4"><img src="../enkkusivut/images/plate.jpg">
                     </label>
                                     
-                                <select name="plate" id="plateQ1">
-                                    <option onclick="incorrectD3()">yarn</option>
-                                    <option onclick="correctD3()">plate</option>
-                                    <option onclick="incorrectD3()">flower</option>
-                                </select> 
+                                    <button id = "plateinCorrectFirst" onclick="incorrectD3()">yarn</button>
+                                    <button id = "plateCorrectSec" onclick="correctD3()">plate</button>
+                                    <button id = "plateinCorrectSec" onclick="incorrectD3()">flower</button>
+
                                 <p id="result4.3"></p>
                                 <p id="error4.3"></p>              
                     <button type="button" onclick="visa04()">Tarkista vastaukset!</button>
@@ -376,36 +355,33 @@
 
                 <!-- Gifit on Canvan ilmaisesta versiosta. https://www.canva.com/ -->
 
-                <label for="paint" class="questions5" text id ="paint"><img src="../enkkusivut/images/painting.gif">
+                <label for="paint" class="questions5"><img src="../enkkusivut/images/painting.gif">
                 </label>
-                                
-                            <select name="paint" id="paintQ">
-                                <option onclick="incorrectE1()">draw</option>
-                                <option onclick="correctE1()">paint</option>
-                                <option onclick="incorrectE1()">apply</option>
-                            </select> 
+            
+                                <button id = "paintinCorrect1" onclick="incorrectE1()">draw</button>
+                                <button id = "paintCorrect" onclick="correctE1()">paint</button>
+                                <button id = "paintinCorrect2" onclick="incorrectE1()">apply</button>
+                        
                             <p id="result5.1"></p>
                             <p id="error5.1"></p>
                             
-                <label for="wave" class="questions5" text id ="wave"><img src="../enkkusivut/images/wave.gif">
+                <label for="wave" class="questions5"><img src="../enkkusivut/images/wave.gif">
                 </label>
                                             
-                            <select name="wave" id="waveQ">
-                                <option onclick="incorrectE2()">fluctuate</option>
-                                <option onclick="incorrectE2()">sign</option>
-                                <option onclick="correctE2()">wave</option>
-                            </select> 
+                                <button id = "waveinCorrect1" onclick="incorrectE2()">fluctuate</button>
+                                <button id = "waveinCorrect2" onclick="incorrectE2()">sign</button>
+                                <button id = "waveCorrect" onclick="correctE2()">wave</button>
+
                             <p id="result5.2"></p>
                             <p id="error5.2"></p> 
 
-                <label for="eat" class="questions5" text id ="eat"><img src="../enkkusivut/images/eat.gif">
+                <label for="eat" class="questions5"><img src="../enkkusivut/images/eat.gif">
                 </label>
                                                     
-                            <select name="eat" id="eatQ">
-                                <option onclick="incorrectE3()">sip</option>
-                                <option onclick="incorrectE3()">drink</option>
-                                <option onclick="correctE3()">eat</option>
-                            </select> 
+                                <button id = "eatinCorrect1" onclick="incorrectE3()">sip</button>
+                                <button id = "eatinCorrect2" onclick="incorrectE3()">drink</button>
+                                <button id = "eatCorrect" onclick="correctE3()">eat</button>
+
                             <p id="result5.3"></p>
                             <p id="error5.3"></p> 
 

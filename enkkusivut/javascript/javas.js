@@ -17,11 +17,12 @@ const incorrectA = "Väärin! Oikea vastaus olisi ollut ";
 että jokaisesta saa pisteen. Tein jokaisesta vastauksesta erikseen funktiot juurikin tämän toiminnallisuuden takia
 sekä myös sen takia, jotta saan lukittua valikot. */
 
-function correctA1() {
+document.getElementById("forkCorrect").addEventListener("click", oikeahaarukka);
 
+function oikeahaarukka() {
     // Kun vastaus on oikein, tulostetaan sille tarkoitettu palaute vakiosta correctA.
 
-    document.getElementById("result1.1").innerHTML = correctA;
+    document.getElementById("result1.first").innerHTML = correctA;
 
     // Tyhjennetään väärän vastauksen kenttä.
 
@@ -29,18 +30,22 @@ function correctA1() {
 
     // Lisätään ensimmäisen osion pistelaskentaan quiz_Score muuttujan avulla yksi piste.
 
-    quiz_Score++;
-    document.getElementById("quiz_Score").innerHTML = quiz_Score;
+    document.getElementById("quiz_Score").innerHTML = quiz_Score++;
 
     // Lukitaan vastausvalikko.
 
-    document.getElementById("forkQ").disabled=true;
+    document.getElementById("forkCorrect").disabled=true;
+    document.getElementById("forkinCorrect").disabled=true;
+    document.getElementById("forkinCorrect2").disabled=true;
 }
+
+document.getElementById("forkinCorrect").addEventListener("click", väärähaarukka);
+document.getElementById("forkinCorrect").addEventListener("click", väärähaarukka);
 
 /* Väärille vastauksille on myös omat funktionsa, jotta pisteiden lasku onnistuu oikein ja jotta silloinkin
 vastausvalikko saadaan lukittua. */
 
-function incorrect() {
+function väärähaarukka() {
 
     // Tulostetaan väärän vastauksen elementtiin väärille vastauksille tarkoitettu viesti vakiosta incorrectA.
 
@@ -52,55 +57,81 @@ function incorrect() {
 
     // Lukitaan vastausvalikko.
 
-    document.getElementById("forkQ").disabled=true;
+    document.getElementById("forkCorrect").disabled=true;
+    document.getElementById("forkinCorrect").disabled=true;
+    document.getElementById("forkinCorrect2").disabled=true;
 }
+
+document.getElementById("plateCorrect").addEventListener("click", correctA2);
 
 function correctA2() {
     document.getElementById("result1.2").innerHTML = correctA;
     document.getElementById("error1.2").innerHTML = "";
-    quiz_Score++;
     document.getElementById("quiz_Score").innerHTML = quiz_Score;
 
-    document.getElementById("plateQ").disabled=true;
+    document.getElementById("plateCorrect").disabled=true;
+    document.getElementById("plateinCorrect").disabled=true;
+    document.getElementById("plateinCorrect2").disabled=true;
 }
+
+document.getElementById("plateinCorrect").addEventListener("click", incorrect2);
+document.getElementById("plateinCorrect2").addEventListener("click", incorrect2);
 
 function incorrect2() {
     document.getElementById("result1.2").innerHTML = "";
     document.getElementById("error1.2").innerHTML = incorrectA + "<i>plate.</i>";
 
-    document.getElementById("plateQ").disabled=true;
+    document.getElementById("plateCorrect").disabled=true;
+    document.getElementById("plateinCorrect").disabled=true;
+    document.getElementById("plateinCorrect2").disabled=true;
 }
+
+document.getElementById("kitchenCorrect").addEventListener("click", correctA3);
 
 function correctA3() {
     document.getElementById("result1.3").innerHTML = correctA;
     document.getElementById("error1.3").innerHTML = "";
-    quiz_Score++;
-    document.getElementById("quiz_Score").innerHTML = quiz_Score;
+    document.getElementById("quiz_Score").innerHTML = quiz_Score++;
 
-    document.getElementById("kitchenQ").disabled=true;
+    document.getElementById("kitchenCorrect").disabled=true;
+    document.getElementById("kitcheninCorrect").disabled=true;
+    document.getElementById("kitcheninCorrect2").disabled=true;
 }
+
+document.getElementById("kitcheninCorrect").addEventListener("click", incorrect3);
+document.getElementById("kitcheninCorrect2").addEventListener("click", incorrect3);
 
 function incorrect3() {
     document.getElementById("result1.3").innerHTML = "";
     document.getElementById("error1.3").innerHTML = incorrectA + "<i>kitchen.</i>";
 
-    document.getElementById("kitchenQ").disabled=true;
+    document.getElementById("kitchenCorrect").disabled=true;
+    document.getElementById("kitcheninCorrect").disabled=true;
+    document.getElementById("kitcheninCorrect2").disabled=true;
 }
+
+document.getElementById("bowlCorrect").addEventListener("click", correctA4);
 
 function correctA4() {
     document.getElementById("result1.4").innerHTML = correctA;
     document.getElementById("error1.4").innerHTML = "";
-    quiz_Score++;
     document.getElementById("quiz_Score").innerHTML = quiz_Score;
 
-    document.getElementById("bowlQ").disabled=true;
+    document.getElementById("bowlCorrect").disabled=true;
+    document.getElementById("bowlinCorrect").disabled=true;
+    document.getElementById("bowlinCorrect2").disabled=true;
 }
+
+document.getElementById("bowlinCorrect").addEventListener("click", correctA4);
+document.getElementById("bowlinCorrect2").addEventListener("click", correctA4);
 
 function incorrect4() {
     document.getElementById("result1.4").innerHTML = "";
     document.getElementById("error1.4").innerHTML = incorrectA + "<i>bowl.</i>";
 
-    document.getElementById("bowlQ").disabled=true;
+    document.getElementById("bowlCorrect").disabled=true;
+    document.getElementById("bowlinCorrect").disabled=true;
+    document.getElementById("bowlinCorrect2").disabled=true;
 }
 
 // Tehtäväosioiden palautteille omat vakiot tulostusviesteille.
@@ -135,84 +166,155 @@ function NextQuestion() {
 
 let quiz_ScoreB = 0;
 
+document.getElementById("monCorrect").addEventListener("click", correctB1);
+
 function correctB1() {
     document.getElementById("result2.1").innerHTML = correctA;
     document.getElementById("error2.1").innerHTML = "";
-    quiz_ScoreB++;
-    document.getElementById("quiz_ScoreB").innerHTML = quiz_ScoreB;
+    document.getElementById("quiz_ScoreB").innerHTML = quiz_ScoreB++;
 
-    document.getElementById("mondayQ").disabled=true;
+    document.getElementById("monCorrect").disabled=true;
+    document.getElementById("moninCorrect1").disabled=true;
+    document.getElementById("moninCorrect2").disabled=true;
+    document.getElementById("moninCorrect3").disabled=true;
+    document.getElementById("moninCorrect4").disabled=true;
 }
+
+document.getElementById("moninCorrect1").addEventListener("click", incorrectB1);
+document.getElementById("moninCorrect2").addEventListener("click", incorrectB1);
+document.getElementById("moninCorrect3").addEventListener("click", incorrectB1);
+document.getElementById("moninCorrect4").addEventListener("click", incorrectB1);
 
 function incorrectB1() {
     document.getElementById("result2.1").innerHTML = "";
     document.getElementById("error2.1").innerHTML = incorrectA + "<i>monday.</i>";
 
-    document.getElementById("mondayQ").disabled=true;
+    document.getElementById("monCorrect").disabled=true;
+    document.getElementById("moninCorrect1").disabled=true;
+    document.getElementById("moninCorrect2").disabled=true;
+    document.getElementById("moninCorrect3").disabled=true;
+    document.getElementById("moninCorrect4").disabled=true;
 }
+
+document.getElementById("tueCorrect").addEventListener("click", correctB2);
 
 function correctB2() {
     document.getElementById("result2.2").innerHTML = correctA;
     document.getElementById("error2.2").innerHTML = "";
-    quiz_ScoreB++;
     document.getElementById("quiz_ScoreB").innerHTML = quiz_ScoreB;
 
-    document.getElementById("tuesdayQ").disabled=true;
+    document.getElementById("tueCorrect").disabled=true;
+    document.getElementById("tueinCorrect1").disabled=true;
+    document.getElementById("tueinCorrect2").disabled=true;
+    document.getElementById("tueinCorrect3").disabled=true;
+    document.getElementById("tueinCorrect4").disabled=true;
 }
+
+document.getElementById("tueinCorrect1").addEventListener("click", incorrectB2);
+document.getElementById("tueinCorrect2").addEventListener("click", incorrectB2);
+document.getElementById("tueinCorrect3").addEventListener("click", incorrectB2);
+document.getElementById("tueinCorrect4").addEventListener("click", incorrectB2);
 
 function incorrectB2() {
     document.getElementById("result2.2").innerHTML = "";
     document.getElementById("error2.2").innerHTML = incorrectA + "<i>tuesday.</i>";
 
-    document.getElementById("tuesdayQ").disabled=true;
+    document.getElementById("tueCorrect").disabled=true;
+    document.getElementById("tueinCorrect1").disabled=true;
+    document.getElementById("tueinCorrect2").disabled=true;
+    document.getElementById("tueinCorrect3").disabled=true;
+    document.getElementById("tueinCorrect4").disabled=true;
 }
+
+document.getElementById("wedCorrect").addEventListener("click", correctB3);
 
 function correctB3() {
     document.getElementById("result2.3").innerHTML = correctA;
     document.getElementById("error2.3").innerHTML = "";
-    quiz_ScoreB++;
-    document.getElementById("quiz_ScoreB").innerHTML = quiz_ScoreB;
+    document.getElementById("quiz_ScoreB").innerHTML = quiz_ScoreB++;
 
-    document.getElementById("wednesdayQ").disabled=true;
+    document.getElementById("wedCorrect").disabled=true;
+    document.getElementById("wedinCorrect1").disabled=true;
+    document.getElementById("wedinCorrect2").disabled=true;
+    document.getElementById("wedinCorrect3").disabled=true;
+    document.getElementById("wedinCorrect4").disabled=true;
 }
+
+document.getElementById("wedinCorrect1").addEventListener("click", incorrectB3);
+document.getElementById("wedinCorrect2").addEventListener("click", incorrectB3);
+document.getElementById("wedinCorrect3").addEventListener("click", incorrectB3);
+document.getElementById("wedinCorrect4").addEventListener("click", incorrectB3);
 
 function incorrectB3() {
     document.getElementById("result2.3").innerHTML = "";
     document.getElementById("error2.3").innerHTML = incorrectA + "<i>wednesday.</i>";
 
-    document.getElementById("wednesdayQ").disabled=true;
+    document.getElementById("wedCorrect").disabled=true;
+    document.getElementById("wedinCorrect1").disabled=true;
+    document.getElementById("wedinCorrect2").disabled=true;
+    document.getElementById("wedinCorrect3").disabled=true;
+    document.getElementById("wedinCorrect4").disabled=true;
 }
+
+document.getElementById("thurCorrect").addEventListener("click", correctB4);
 
 function correctB4() {
     document.getElementById("result2.4").innerHTML = correctA;
     document.getElementById("error2.4").innerHTML = "";
-    quiz_ScoreB++;
     document.getElementById("quiz_ScoreB").innerHTML = quiz_ScoreB;
 
-    document.getElementById("thursdayQ").disabled=true;
+    document.getElementById("thurCorrect").disabled=true;
+    document.getElementById("thurinCorrect1").disabled=true;
+    document.getElementById("thurinCorrect2").disabled=true;
+    document.getElementById("thurinCorrect3").disabled=true;
+    document.getElementById("thurinCorrect4").disabled=true;
 }
+
+document.getElementById("thurinCorrect1").addEventListener("click", incorrectB4);
+document.getElementById("thurinCorrect2").addEventListener("click", incorrectB4);
+document.getElementById("thurinCorrect3").addEventListener("click", incorrectB4);
+document.getElementById("thurinCorrect4").addEventListener("click", incorrectB4);
 
 function incorrectB4() {
     document.getElementById("result2.4").innerHTML = "";
     document.getElementById("error2.4").innerHTML = incorrectA + "<i>thursday.</i>";
 
-    document.getElementById("thursdayQ").disabled=true;
+    document.getElementById("thurCorrect").disabled=true;
+    document.getElementById("thurinCorrect1").disabled=true;
+    document.getElementById("thurinCorrect2").disabled=true;
+    document.getElementById("thurinCorrect3").disabled=true;
+    document.getElementById("thurinCorrect4").disabled=true;
 }
+
+document.getElementById("friCorrect").addEventListener("click", correctB5);
+
 
 function correctB5() {
     document.getElementById("result2.5").innerHTML = correctA;
     document.getElementById("error2.5").innerHTML = "";
-    quiz_ScoreB++;
-    document.getElementById("quiz_ScoreB").innerHTML = quiz_ScoreB;
+    document.getElementById("quiz_ScoreB").innerHTML = quiz_ScoreB++;
 
-    document.getElementById("fridayQ").disabled=true;
+    document.getElementById("friCorrect").disabled=true;
+    document.getElementById("friinCorrect1").disabled=true;
+    document.getElementById("friinCorrect2").disabled=true;
+    document.getElementById("friinCorrect3").disabled=true;
+    document.getElementById("friinCorrect4").disabled=true;
 }
+
+document.getElementById("friinCorrect1").addEventListener("click", incorrectB5);
+document.getElementById("friinCorrect2").addEventListener("click", incorrectB5);
+document.getElementById("friinCorrect3").addEventListener("click", incorrectB5);
+document.getElementById("friinCorrect4").addEventListener("click", incorrectB5);
 
 function incorrectB5() {
     document.getElementById("result2.5").innerHTML = "";
     document.getElementById("error2.5").innerHTML = incorrectA + "<i>friday.</i>";
 
-    document.getElementById("fridayQ").disabled=true;
+    document.getElementById("friCorrect").disabled=true;
+    document.getElementById("friinCorrect1").disabled=true;
+    document.getElementById("friinCorrect2").disabled=true;
+    document.getElementById("friinCorrect3").disabled=true;
+    document.getElementById("friinCorrect4").disabled=true;
 }
 
 function visa02() {
@@ -234,84 +336,155 @@ function NextQuestion2() {
 
 let quiz_ScoreC = 0;
 
+document.getElementById("janCorrect").addEventListener("click", correctC1);
+
 function correctC1() {
     document.getElementById("result3.1").innerHTML = correctA;
     document.getElementById("error3.1").innerHTML = "";
-    quiz_ScoreC++;
-    document.getElementById("quiz_ScoreC").innerHTML = quiz_ScoreC;
+    document.getElementById("quiz_ScoreC").innerHTML = quiz_ScoreC++;
 
-    document.getElementById("januaryQ").disabled=true;
+    document.getElementById("janCorrect").disabled=true;
+    document.getElementById("janinCorrect1").disabled=true;
+    document.getElementById("janinCorrect2").disabled=true;
+    document.getElementById("janinCorrect3").disabled=true;
+    document.getElementById("janinCorrect4").disabled=true;
 }
+
+document.getElementById("janinCorrect1").addEventListener("click", incorrectC1);
+document.getElementById("janinCorrect2").addEventListener("click", incorrectC1);
+document.getElementById("janinCorrect3").addEventListener("click", incorrectC1);
+document.getElementById("janinCorrect4").addEventListener("click", incorrectC1);
 
 function incorrectC1() {
     document.getElementById("result3.1").innerHTML = "";
     document.getElementById("error3.1").innerHTML = incorrectA + "<i>january.</i>";
 
-    document.getElementById("januaryQ").disabled=true;
+    document.getElementById("janCorrect").disabled=true;
+    document.getElementById("janinCorrect1").disabled=true;
+    document.getElementById("janinCorrect2").disabled=true;
+    document.getElementById("janinCorrect3").disabled=true;
+    document.getElementById("janinCorrect4").disabled=true;
 }
+
+document.getElementById("decCorrect").addEventListener("click", correctC2);
 
 function correctC2() {
     document.getElementById("result3.2").innerHTML = correctA;
     document.getElementById("error3.2").innerHTML = "";
-    quiz_ScoreC++;
     document.getElementById("quiz_ScoreC").innerHTML = quiz_ScoreC;
 
-    document.getElementById("decemberQ").disabled=true;
+    document.getElementById("decCorrect").disabled=true;
+    document.getElementById("decinCorrect1").disabled=true;
+    document.getElementById("decinCorrect2").disabled=true;
+    document.getElementById("decinCorrect3").disabled=true;
+    document.getElementById("decinCorrect4").disabled=true;
 }
+
+document.getElementById("decinCorrect1").addEventListener("click", incorrectC2);
+document.getElementById("decinCorrect2").addEventListener("click", incorrectC2);
+document.getElementById("decinCorrect3").addEventListener("click", incorrectC2);
+document.getElementById("decinCorrect4").addEventListener("click", incorrectC2);
 
 function incorrectC2() {
     document.getElementById("result3.2").innerHTML = "";
     document.getElementById("error3.2").innerHTML = incorrectA + "<i>december.</i>";
 
-    document.getElementById("decemberQ").disabled=true;
+    document.getElementById("decCorrect").disabled=true;
+    document.getElementById("decinCorrect1").disabled=true;
+    document.getElementById("decinCorrect2").disabled=true;
+    document.getElementById("decinCorrect3").disabled=true;
+    document.getElementById("decinCorrect4").disabled=true;
 }
+
+document.getElementById("juneCorrect").addEventListener("click", correctC3);
 
 function correctC3() {
     document.getElementById("result3.3").innerHTML = correctA;
     document.getElementById("error3.3").innerHTML = "";
-    quiz_ScoreC++;
-    document.getElementById("quiz_ScoreC").innerHTML = quiz_ScoreC;
+    document.getElementById("quiz_ScoreC").innerHTML = quiz_ScoreC++;
 
-    document.getElementById("juneQ").disabled=true;
+    document.getElementById("juneCorrect").disabled=true;
+    document.getElementById("juneinCorrect1").disabled=true;
+    document.getElementById("juneinCorrect2").disabled=true;
+    document.getElementById("juneinCorrect3").disabled=true;
+    document.getElementById("juneinCorrect4").disabled=true;
 }
+
+document.getElementById("juneinCorrect1").addEventListener("click", incorrectC3);
+document.getElementById("juneinCorrect2").addEventListener("click", incorrectC3);
+document.getElementById("juneinCorrect3").addEventListener("click", incorrectC3);
+document.getElementById("juneinCorrect4").addEventListener("click", incorrectC3);
 
 function incorrectC3() {
     document.getElementById("result3.3").innerHTML = "";
     document.getElementById("error3.3").innerHTML = incorrectA + "<i>june.</i>";
 
-    document.getElementById("juneQ").disabled=true;
+    
+    document.getElementById("juneCorrect").disabled=true;
+    document.getElementById("juneinCorrect1").disabled=true;
+    document.getElementById("juneinCorrect2").disabled=true;
+    document.getElementById("juneinCorrect3").disabled=true;
+    document.getElementById("juneinCorrect4").disabled=true;
 }
+
+document.getElementById("sepCorrect").addEventListener("click", correctC4);
 
 function correctC4() {
     document.getElementById("result3.4").innerHTML = correctA;
     document.getElementById("error3.4").innerHTML = "";
-    quiz_ScoreC++;
     document.getElementById("quiz_ScoreC").innerHTML = quiz_ScoreC;
 
-    document.getElementById("septemberQ").disabled=true;
+    document.getElementById("sepCorrect").disabled=true;
+    document.getElementById("sepinCorrect1").disabled=true;
+    document.getElementById("sepinCorrect2").disabled=true;
+    document.getElementById("sepinCorrect3").disabled=true;
+    document.getElementById("sepinCorrect4").disabled=true;
 }
+
+document.getElementById("sepinCorrect1").addEventListener("click", incorrectC4);
+document.getElementById("sepinCorrect2").addEventListener("click", incorrectC4);
+document.getElementById("sepinCorrect3").addEventListener("click", incorrectC4);
+document.getElementById("sepinCorrect4").addEventListener("click", incorrectC4);
 
 function incorrectC4() {
     document.getElementById("result3.4").innerHTML = "";
     document.getElementById("error3.4").innerHTML = incorrectA + "<i>september.</i>";
 
-    document.getElementById("septemberQ").disabled=true;
+    document.getElementById("sepCorrect").disabled=true;
+    document.getElementById("sepinCorrect1").disabled=true;
+    document.getElementById("sepinCorrect2").disabled=true;
+    document.getElementById("sepinCorrect3").disabled=true;
+    document.getElementById("sepinCorrect4").disabled=true;
 }
+
+document.getElementById("mayCorrect").addEventListener("click", correctC5);
 
 function correctC5() {
     document.getElementById("result3.5").innerHTML = correctA;
     document.getElementById("error3.5").innerHTML = "";
-    quiz_ScoreC++;
-    document.getElementById("quiz_ScoreC").innerHTML = quiz_ScoreC;
+    document.getElementById("quiz_ScoreC").innerHTML = quiz_ScoreC++;
 
-    document.getElementById("mayQ").disabled=true;
+    document.getElementById("mayCorrect").disabled=true;
+    document.getElementById("mayinCorrect1").disabled=true;
+    document.getElementById("mayinCorrect2").disabled=true;
+    document.getElementById("mayinCorrect3").disabled=true;
+    document.getElementById("mayinCorrect4").disabled=true;
 }
+
+document.getElementById("mayinCorrect1").addEventListener("click", incorrectC5);
+document.getElementById("mayinCorrect2").addEventListener("click", incorrectC5);
+document.getElementById("mayinCorrect3").addEventListener("click", incorrectC5);
+document.getElementById("mayinCorrect4").addEventListener("click", incorrectC5);
 
 function incorrectC5() {
     document.getElementById("result3.5").innerHTML = "";
     document.getElementById("error3.5").innerHTML = incorrectA + "<i>may.</i>";
 
-    document.getElementById("mayQ").disabled=true;
+    document.getElementById("mayCorrect").disabled=true;
+    document.getElementById("mayinCorrect1").disabled=true;
+    document.getElementById("mayinCorrect2").disabled=true;
+    document.getElementById("mayinCorrect3").disabled=true;
+    document.getElementById("mayinCorrect4").disabled=true;
 }
 
 function visa03() {
@@ -334,52 +507,76 @@ function NextQuestion3() {
 
 let quiz_ScoreD = 0;
 
+document.getElementById("flowerCorrect").addEventListener("click", correctD1);
+
 function correctD1() {
     document.getElementById("result4.1").innerHTML = correctA;
     document.getElementById("error4.1").innerHTML = "";
-    quiz_ScoreD++;
-    document.getElementById("quiz_ScoreD").innerHTML = quiz_ScoreD;
+    document.getElementById("quiz_ScoreD").innerHTML = quiz_ScoreD++;
 
-    document.getElementById("flowerQ").disabled=true;
+    document.getElementById("flowerCorrect").disabled=true;
+    document.getElementById("flowerinCorrect1").disabled=true;
+    document.getElementById("flowerinCorrect2").disabled=true;
 }
+
+document.getElementById("flowerinCorrect1").addEventListener("click", incorrectD1);
+document.getElementById("flowerinCorrect2").addEventListener("click", incorrectD1);
 
 function incorrectD1() {
     document.getElementById("result4.1").innerHTML = "";
     document.getElementById("error4.1").innerHTML = incorrectA + "<i>flower.</i>";
 
-    document.getElementById("flowerQ").disabled=true;
+    document.getElementById("flowerCorrect").disabled=true;
+    document.getElementById("flowerinCorrect1").disabled=true;
+    document.getElementById("flowerinCorrect2").disabled=true;
 }
+
+document.getElementById("yarnCorrect").addEventListener("click", correctD2);
 
 function correctD2() {
     document.getElementById("result4.2").innerHTML = correctA;
     document.getElementById("error4.2").innerHTML = "";
-    quiz_ScoreD++;
     document.getElementById("quiz_ScoreD").innerHTML = quiz_ScoreD;
 
-    document.getElementById("yarnQ").disabled=true;
+    document.getElementById("yarnCorrect").disabled=true;
+    document.getElementById("yarninCorrect1").disabled=true;
+    document.getElementById("yarninCorrect2").disabled=true;
 }
+
+document.getElementById("yarninCorrect1").addEventListener("click", incorrectD2);
+document.getElementById("yarninCorrect2").addEventListener("click", incorrectD2);
 
 function incorrectD2() {
     document.getElementById("result4.2").innerHTML = "";
     document.getElementById("error4.2").innerHTML = incorrectA + "<i>yarn.</i>";
 
-    document.getElementById("yarnQ").disabled=true;
+    document.getElementById("yarnCorrect").disabled=true;
+    document.getElementById("yarninCorrect1").disabled=true;
+    document.getElementById("yarninCorrect2").disabled=true;
 }
+
+document.getElementById("plateCorrectSec").addEventListener("click", correctD3);
 
 function correctD3() {
     document.getElementById("result4.3").innerHTML = correctA;
     document.getElementById("error4.3").innerHTML = "";
-    quiz_ScoreD++;
-    document.getElementById("quiz_ScoreD").innerHTML = quiz_ScoreD;
+    document.getElementById("quiz_ScoreD").innerHTML = quiz_ScoreD++;
 
-    document.getElementById("plateQ1").disabled=true;
+    document.getElementById("plateCorrectSec").disabled=true;
+    document.getElementById("plateinCorrectFirst").disabled=true;
+    document.getElementById("plateinCorrectSec").disabled=true;
 }
+
+document.getElementById("plateinCorrectSec").addEventListener("click", incorrectD3);
+document.getElementById("plateinCorrectFirst").addEventListener("click", incorrectD3);
 
 function incorrectD3() {
     document.getElementById("result4.3").innerHTML = "";
     document.getElementById("error4.3").innerHTML = incorrectA + "<i>plate.</i>";
 
-    document.getElementById("plateQ1").disabled=true;
+    document.getElementById("plateCorrectSec").disabled=true;
+    document.getElementById("plateinCorrectFirst").disabled=true;
+    document.getElementById("plateinCorrectSec").disabled=true;
 }
 
 function visa04() {
@@ -402,52 +599,77 @@ function NextQuestion4() {
 
 let quiz_ScoreE = 0;
 
+document.getElementById("paintCorrect").addEventListener("click", correctE1);
+
 function correctE1() {
     document.getElementById("result5.1").innerHTML = correctA;
     document.getElementById("error5.1").innerHTML = "";
-    quiz_ScoreE++;
-    document.getElementById("quiz_ScoreE").innerHTML = quiz_ScoreE;
+    document.getElementById("quiz_ScoreE").innerHTML = quiz_ScoreE++;
 
-    document.getElementById("paintQ").disabled=true;
+    document.getElementById("paintCorrect").disabled=true;
+    document.getElementById("paintinCorrect1").disabled=true;
+    document.getElementById("paintinCorrect2").disabled=true;
 }
+
+document.getElementById("paintinCorrect1").addEventListener("click", incorrectE1);
+document.getElementById("paintinCorrect2").addEventListener("click", incorrectE1);
 
 function incorrectE1() {
     document.getElementById("result5.1").innerHTML = "";
     document.getElementById("error5.1").innerHTML = incorrectA + "<i>paint.</i>";
 
-    document.getElementById("paintQ").disabled=true;
+    document.getElementById("paintCorrect").disabled=true;
+    document.getElementById("paintinCorrect1").disabled=true;
+    document.getElementById("paintinCorrect2").disabled=true;
 }
+
+document.getElementById("waveCorrect").addEventListener("click", correctE2);
 
 function correctE2() {
     document.getElementById("result5.2").innerHTML = correctA;
     document.getElementById("error5.2").innerHTML = "";
-    quiz_ScoreE++;
     document.getElementById("quiz_ScoreE").innerHTML = quiz_ScoreE;
 
-    document.getElementById("waveQ").disabled=true;
+    document.getElementById("waveCorrect").disabled=true;
+    document.getElementById("waveinCorrect1").disabled=true;
+    document.getElementById("waveinCorrect2").disabled=true;
 }
+
+document.getElementById("waveinCorrect1").addEventListener("click", incorrectE2);
+document.getElementById("waveinCorrect2").addEventListener("click", incorrectE2);
 
 function incorrectE2() {
     document.getElementById("result5.2").innerHTML = "";
     document.getElementById("error5.2").innerHTML = incorrectA + "<i>wave.</i>";
 
-    document.getElementById("waveQ").disabled=true;
+    document.getElementById("waveCorrect").disabled=true;
+    document.getElementById("waveinCorrect1").disabled=true;
+    document.getElementById("waveinCorrect2").disabled=true;
 }
+
+document.getElementById("eatCorrect").addEventListener("click", correctE3);
 
 function correctE3() {
     document.getElementById("result5.3").innerHTML = correctA;
     document.getElementById("error5.3").innerHTML = "";
-    quiz_ScoreE++;
-    document.getElementById("quiz_ScoreE").innerHTML = quiz_ScoreE;
+    document.getElementById("quiz_ScoreE").innerHTML = quiz_ScoreE++;
 
-    document.getElementById("eatQ").disabled=true;
+    document.getElementById("eatCorrect").disabled=true;
+    document.getElementById("eatinCorrect1").disabled=true;
+    document.getElementById("eatinCorrect2").disabled=true;
 }
+
+
+document.getElementById("eatinCorrect1").addEventListener("click", incorrectE3);
+document.getElementById("eatinCorrect2").addEventListener("click", incorrectE3);
 
 function incorrectE3() {
     document.getElementById("result5.3").innerHTML = "";
     document.getElementById("error5.3").innerHTML = incorrectA + "<i>eat.</i>";
 
-    document.getElementById("eatQ").disabled=true;
+    document.getElementById("eatCorrect").disabled=true;
+    document.getElementById("eatinCorrect1").disabled=true;
+    document.getElementById("eatinCorrect2").disabled=true;
 }
 
 function visa05() {

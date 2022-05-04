@@ -56,10 +56,6 @@ div.container {
     background-color: orange;
 }
 
-body::-webkit-scrollbar {
-    display: none;
-  }
-
 section {
     border-bottom: burlywood 3px dotted;
     padding: 5px;
