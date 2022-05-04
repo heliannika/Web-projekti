@@ -1,8 +1,10 @@
+// Muuttujat jokaiselle kysymysosiolle, joita pystyy hyödyntämään sivuston skrollaustoiminnossa.
+
 let firstsec = document.getElementById("question_Section1");
 let secondsec = document.getElementById("question_Section2");
 let thirdsec = document.getElementById("question_Section3");
 let fourthsec = document.getElementById("question_Section4");
-let fifthsec = document.getElementById("question_Section5");// Muuttujat jokaiselle kysymysosiolle, joita pystyy hyödyntämään sivuston skrollaustoiminnossa.
+let fifthsec = document.getElementById("question_Section5");
 
 // Ensimmäisen osion pisteiden muuttujan ja arvon määrittely nollaksi.
 
@@ -15,47 +17,48 @@ const incorrectA = "Väärin! Oikea vastaus olisi ollut ";
 
 /* Jokaisen tehtävän funktiot toimivat samalla tavalla joka osiossa. Oikeiden vastausten funktiot toimivat siten,
 että jokaisesta saa pisteen. Tein jokaisesta vastauksesta erikseen funktiot juurikin tämän toiminnallisuuden takia
-sekä myös sen takia, jotta saan lukittua valikot. */
+sekä myös sen takia, jotta saan lukittua vaihtoehdot oppilaan vastattua. */
 
-document.getElementById("forkCorrect").addEventListener("click", oikeahaarukka);
+document.getElementById("forkCorrect").addEventListener("click", correct1);
 
-function oikeahaarukka() {
-    // Kun vastaus on oikein, tulostetaan sille tarkoitettu palaute vakiosta correctA.
+function correct1() {
+
+    /* Kun vastaus on oikein, tulostetaan sille tarkoitettu palaute vakiosta correctA. */
 
     document.getElementById("result1.first").innerHTML = correctA;
 
-    // Tyhjennetään väärän vastauksen kenttä.
+    /* Tyhjennetään väärän vastauksen kenttä. */
 
     document.getElementById("error1.1").innerHTML = "";
 
-    // Lisätään ensimmäisen osion pistelaskentaan quiz_Score muuttujan avulla yksi piste.
+    /* Lisätään ensimmäisen osion pistelaskentaan quiz_Score muuttujan avulla yksi piste. */
 
     document.getElementById("quiz_Score").innerHTML = quiz_Score++;
 
-    // Lukitaan vastausvalikko.
+    /* Lukitaan vastausvaihtoehdot. */
 
     document.getElementById("forkCorrect").disabled=true;
     document.getElementById("forkinCorrect").disabled=true;
     document.getElementById("forkinCorrect2").disabled=true;
 }
 
-document.getElementById("forkinCorrect").addEventListener("click", väärähaarukka);
-document.getElementById("forkinCorrect").addEventListener("click", väärähaarukka);
-
 /* Väärille vastauksille on myös omat funktionsa, jotta pisteiden lasku onnistuu oikein ja jotta silloinkin
-vastausvalikko saadaan lukittua. */
+vastausvaihtoehdot saadaan lukittua. */
 
-function väärähaarukka() {
+document.getElementById("forkinCorrect").addEventListener("click", incorrect1);
+document.getElementById("forkinCorrect2").addEventListener("click", incorrect1);
 
-    // Tulostetaan väärän vastauksen elementtiin väärille vastauksille tarkoitettu viesti vakiosta incorrectA.
+function incorrect1() {
+
+    /* Tulostetaan väärän vastauksen elementtiin väärille vastauksille tarkoitettu viesti vakiosta incorrectA. */
 
     document.getElementById("error1.1").innerHTML = incorrectA + "<i>fork.</i>";
 
-    // Tyhjennetään oikean vastauksen palautekenttä.
+    /* Tyhjennetään oikean vastauksen palautekenttä. */
 
-    document.getElementById("result1.1").innerHTML = "";
+    document.getElementById("result1.first").innerHTML = "";
 
-    // Lukitaan vastausvalikko.
+    /* Lukitaan vastausvalikko. */
 
     document.getElementById("forkCorrect").disabled=true;
     document.getElementById("forkinCorrect").disabled=true;
@@ -122,8 +125,8 @@ function correctA4() {
     document.getElementById("bowlinCorrect2").disabled=true;
 }
 
-document.getElementById("bowlinCorrect").addEventListener("click", correctA4);
-document.getElementById("bowlinCorrect2").addEventListener("click", correctA4);
+document.getElementById("bowlinCorrect").addEventListener("click", incorrect4);
+document.getElementById("bowlinCorrect2").addEventListener("click", incorrect4);
 
 function incorrect4() {
     document.getElementById("result1.4").innerHTML = "";
@@ -164,7 +167,11 @@ function NextQuestion() {
     secondsec.scrollIntoView({behavior: "smooth"});
    }
 
+// Seuraavan osion pisteiden määrittelyä nollaksi.
+
 let quiz_ScoreB = 0;
+
+// Toisen osion koodit meni aivan samalla tavalla kuin ensimmäisenkin osion.
 
 document.getElementById("monCorrect").addEventListener("click", correctB1);
 
@@ -686,6 +693,7 @@ function visa05() {
 
 }
 
+// Lopullisten pisteiden lasku. Jokaisen osion pistemäärät lasketaan yhteen ja tulostuu sille pistemäärälle kuuluva kommentti.
 
 function SubmitTheQuiz() {
 

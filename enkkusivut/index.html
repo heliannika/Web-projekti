@@ -41,7 +41,7 @@
                 </div>
             </div>
         </nav>
-        
+        <!-- Nimi ja kuvaus. -->
             <div class="container">
                 <div class="row">
                     <div  class="col-md-12 col-sm-12">
@@ -74,17 +74,17 @@
                                 <!-- Kysymys & tehtävän anto. -->
 
                                 <h2>Mitä sanat tarkoittavat englanniksi?</h2>
-                                <p>Valitse valikosta englannin kielellä samaa tarkoittava sana.</p>
+                                <p>Valitse vaihtoehdoista englannin kielellä samaa tarkoittava sana.</p>
 
                                 <!-- Määritellään sana, jolle halutaan käännössana. -->
 
-                                <label for="fork" class="questions" id ="fork" name = "fork">Haarukka</label>
+                                <label for="fork" class="questions">Haarukka</label>
 
-                                <!-- Vastausvaihtoehtojen määrittelyt dropdown -valikkoon. -->
+                                <!-- Vastausvaihtoehtojen määrittelyt ja niille omat napit funktioineen. -->
             
-                                    <button id = "forkinCorrect" onclick="väärähaarukka()" value = "haarukkaväärin1">spoon</button>
-                                    <button id = "forkinCorrect2" onclick="väärähaarukka()" value = "haarukkaväärin">knife</button>
-                                    <button id = "forkCorrect" onclick="oikeahaarukka()" value = "haarukkaoikein">fork</button>
+                                    <button id = "forkinCorrect" onclick="incorrect1()">spoon</button>
+                                    <button id = "forkinCorrect2" onclick="incorrect1()">knife</button>
+                                    <button id = "forkCorrect" onclick="correct1()">fork</button>
 
                                 <!-- Palautteiden tulostuselementit. -->
 
@@ -117,7 +117,7 @@
                                 <p id="result1.4"></p>
                                 <p id="error1.4"></p>
 
-                                <!-- Painike pisteiden tulostukseen. -->
+                                <!-- Painike osion pisteiden tulostukseen. -->
 
                     <button type="button" onclick="visa01()">Tarkista vastaukset!</button>
 
@@ -144,7 +144,7 @@
                             </div>
                             <form>
                                 <h2>Mikä viikonpäivä on kyseessä?</h2>
-                                <p>Valitse valikosta englannin kielellä samaa tarkoittava viikonpäivä.</p>
+                                <p>Valitse vaihtoehdoista englannin kielellä samaa tarkoittava viikonpäivä.</p>
                                 <label for="monday" class="questions2">Maanantai</label>
             
                                     <button id = "moninCorrect1" onclick="incorrectB1()">Friday</button>
@@ -219,7 +219,7 @@
                             </div>
                             <form>
                                 <h2>Mikä kuukausi on kyseessä?</h2>
-                                <p>Valitse valikosta englannin kielellä samaa tarkoittava kuukausi.</p>
+                                <p>Valitse vaihtoehdoista englannin kielellä samaa tarkoittava kuukausi.</p>
                                 <label for="january" class="questions3">Tammikuu</label>
     
                                     <button id = "janinCorrect1" onclick="incorrectC1()">June</button>
@@ -294,7 +294,7 @@
                             </div>
                     <form>
                     <h2>Mitä näet kuvassa?</h2>
-                    <p>Valitse valikosta jokaisen kuvan kohdalta kyseistä kuvaa kuvaava sana.</p>
+                    <p>Valitse vaihtoehdoista jokaisen kuvan kohdalta kyseistä kuvaa kuvaava sana.</p>
 
                     <!-- https://pixabay.com -->
 
@@ -350,10 +350,10 @@
                             </div>    
                             </div>
                     <h2>Mikä verbi kuvastaa GIF-animaatiota?</h2>
-                    <p>Valitse valikosta verbeistä kuvaavin jokaisen animaation kohdalla.</p>
+                    <p>Valitse vaihtoehdoista kuvaavin verbi jokaisen animaation kohdalla.</p>
                 </div>
 
-                <!-- Gifit on Canvan ilmaisesta versiosta. https://www.canva.com/ -->
+                <!-- Gifit olivat Canvan valmiita GIFejä. https://www.canva.com/ -->
 
                 <label for="paint" class="questions5"><img src="../enkkusivut/images/painting.gif">
                 </label>
@@ -388,6 +388,9 @@
                 <button type="button" onclick="visa05()">Tarkista vastaukset!</button>
                 <p id="result5"></p>
                 <p id="error5"></p> 
+
+                <!-- Koko visan pistemäärien tulostukset ja omat tulostukset jokaiselle visualisoinnin helpottamiseksi. -->
+
                     <button type="button" onclick="SubmitTheQuiz()" id="submitTheQuiz">Visan lopullinen tulos!</button>
                     <p id = "resultsfortheQuiz1"></p>
                     <p id = "resultsfortheQuiz2"></p>
